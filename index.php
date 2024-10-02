@@ -47,7 +47,7 @@
                     </dl>
                     <dl>
                         <dt>연락처</dt>
-                        <dd><input type="text" name="phone" placeholder="ex) 010 - 0000 - 0000"></dd>
+                        <dd><input type="text" name="phone" placeholder="ex) 01012345678"></dd>
                     </dl>
                     <dl>
                         <dt>이메일</dt>
@@ -189,10 +189,10 @@
                                         </div>
 
                                         <div class="product-sort">
-                                            <div class="sort-box">상품</div>
-                                            <div class="sort-box">상품</div>
-                                            <div class="sort-box">상품</div>
-                                            <div class="sort-box">상품</div>
+                                            <div class="sort-box">소파</div>
+                                            <div class="sort-box">책상</div>
+                                            <div class="sort-box">조명</div>
+                                            <div class="sort-box">서랍장</div>
                                         </div>
                                     </div>
                                 </div>
@@ -244,8 +244,8 @@
                 <i class="fa-solid fa-x" id="close-modal"></i>
                 <h2>신청조회</h2>
                 <div class="input-box">
-                    <p><span>성명</span><input type="text" name=""></p>
-                    <p><span>전화번호</span><input type="text" name="" placeholder="ex) 010 - 0000 - 0000"></p>
+                    <p><span>성명</span><input type="text" name="view-name"></p>
+                    <p><span>전화번호</span><input type="text" name="view-phone" placeholder="ex) 01012345678"></p>
                 </div>
                 <ul>
                     <li><p>- 구매 상담 신청 시 인증 받은 성명과 휴대폰 번호를 입력하시면 구매 상담 신청 내역을 확인하실 수 있습니다.</p></li>

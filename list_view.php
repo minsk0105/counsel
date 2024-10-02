@@ -1,3 +1,37 @@
+<?php
+    $conn = mysqli_connect('localhost', 'root', '', 'consult_form');
+
+    $saved_name = $_POST['view-name'];
+    $saved_phone = $_POST['view-phone'];
+
+    $read_sql = "SELECT * FROM counsel WHERE
+        name = '{$saved_name}' AND phone = '{$saved_phone}'
+    ";
+    
+    $result = mysqli_query($conn, $read_sql);
+
+    $list = '';
+    if ($saved_name === '') {
+        $list = "
+            <tr class=\"info-flex\">
+                <td></td>
+                <td>귀하께서는 구매상담 신청을 하지 않으셨습니다.</td>
+                <td></td>
+            </tr>
+        ";
+    }
+
+    while ($row = mysqli_fetch_array($result)) {
+        $list = $list."
+            <tr class=\"info-flex\">
+                <td>{$row['method']}</td>
+                <td>{$row['text']}</td>
+                <td>{$row['date']}</td>
+            </tr>
+        ";
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -36,9 +70,8 @@
             <section class="list">
                 <div class="list-header">
                     <p class="user-head">
-                        <span>신청인 : 나는바보</span>
-                        <span>연락처 : 010-1111-7878</span>
-                        <span>이메일 : example1234@counsel.com</span>
+                        <span><b>신청인:</b> <?=$saved_name?></span>
+                        <span><b>연락처:</b> <?=$saved_phone?></span>
                     </p>
                 </div>
                 <table>
@@ -51,17 +84,7 @@
                     </thead>
                     <tbody>
                         <table>
-                            <tr class="info-flex">
-                                <td>전화상담</td>
-                                <td>예약일자 해당하는 주 목요일에 상담 원합니다.</td>
-                                <td>2024-10-03</td>
-                            </tr>
-
-                            <tr class="info-flex">
-                                <td>방문상담</td>
-                                <td>4인 가족이 사용할 수 있는 소파 구입 생각하고 있습니다.</td>
-                                <td>2024-10-25</td>
-                            </tr>
+                            <?=$list?>
                         </table>
                     </tbody>
                 </table>
