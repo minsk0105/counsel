@@ -259,7 +259,7 @@
     </form>
 
     <script src="script.js"></script>
-    <script src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=YOUR_CLIENT_ID"></script>
+    <script src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=YOUR_CLIENT_ID"></script> 
 
 </body>
 </html>
