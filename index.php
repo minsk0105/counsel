@@ -9,7 +9,7 @@
 </head>
 <body>
     
-    <form action="data_action.php" method="post">
+    <form action="data_action.php" method="post" id="input_form">
         
         <header class="header">
             <div class="home">
@@ -71,7 +71,7 @@
                     </dl>
                     <dl style="position: relative;">
                         <dt>개인정보 취급방침 <span>(필수)</span></dt>
-                        <dd class="agree"><input type="checkbox" name="agree">이용확인 동의</dd>
+                        <dd class="agree"><input type="checkbox" name="agree" id="personal">이용확인 동의</dd>
                         <dd class="rule-box">
                             <p class="rule-info">
                                 (주)LoremCompany(이하 “회사”라 함)은 통신비밀보호법, 전기통신사업법, 정보통신망 이용촉진 및 정보보호 등에 관한 법률 등 정보통신서비스제공자가 준수하여야 할 관련 법령상의 개인정보보호 규정을 준수하며, 관련 법령에 의거한 개인정보처리방침을 정하여 이용자 권익 보호에 최선을 다하고 있습니다. 회사의 개인정보처리방침은 관련 법률 및 지침에 따라 변경될 수 있고 개정의 경우 7일전에 홈페이지를 통해 고지할 것 입니다. 회사의 개인정보처리방침은 다음과 같은 내용을 담고 있습니다.<br><br>
@@ -210,7 +210,7 @@
                         </div>
 
                         <div class="button">
-                            <input type="submit" value="상담신청">
+                            <input type="submit" value="상담신청" class="insert-btn">
                             <button type="button" id="read-list">신청목록 조회</button>
                         </div>
     
@@ -235,18 +235,21 @@
             </div>
         </footer>
 
+    </form>
+
+    <form action="list_view.php" method="post">
         <div class="app-inquiry close-toggle">
 
             <div class="app-box">
                 <i class="fa-solid fa-x" id="close-modal"></i>
                 <h2>신청조회</h2>
                 <div class="input-box">
-                    <p><span>성명</span><input type="text" name="name"></p>
-                    <p><span>전화번호</span><input type="text" name="phone" placeholder="ex) 010 - 0000 - 0000"></p>
+                    <p><span>성명</span><input type="text" name=""></p>
+                    <p><span>전화번호</span><input type="text" name="" placeholder="ex) 010 - 0000 - 0000"></p>
                 </div>
                 <ul>
-                    <li><p>구매 상담 신청 시 인증 받은 성명과 휴대폰 번호를 입력하시면 구매 상담 신청 내역을 확인하실 수 있습니다.</p></li>
-                    <li><p>회원이신 경우 마이페이지 > 구매 상담 신청 내역에서 확인 가능합니다.</p></li>
+                    <li><p>- 구매 상담 신청 시 인증 받은 성명과 휴대폰 번호를 입력하시면 구매 상담 신청 내역을 확인하실 수 있습니다.</p></li>
+                    <li><p>- 회원이신 경우 마이페이지 > 구매 상담 신청 내역에서 확인 가능합니다.</p></li>
                 </ul>
                 <div class="app-submit">
                     <button type="button" id="cancel">취소</button>
@@ -255,7 +258,6 @@
             </div>
 
         </div>
-
     </form>
 
     <script src="script.js"></script>

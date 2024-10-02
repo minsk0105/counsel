@@ -463,30 +463,29 @@ footer p {
 }
 
 .input-box span {
-    margin: 0 50px;
+    margin-left: 30px;
     font-size: 16px;
     font-weight: bold;
 }
 
 .input-box input {
-    margin: 0 50px;
-    width: 240px;
+    margin-right: 30px;
+    width: 320px;
     font-size: 16px;
-    padding: 5px 10px;
+    padding: 8px 10px;
     border: 1px solid rgb(196, 196, 196);
 }
 
 .app-box ul {
-    margin-top: 50px;
+    margin-top: 30px;
     width: 100%;
     padding: 0 35px;
 }
 
 .app-box ul > li {
-    list-style: inherit;
-    color: rgb(48, 48, 48);
-    font-size: 16px;
-    font-weight: bold;
+    /* list-style: inherit; */
+    color: rgb(113, 113, 113);
+    font-size: 14px;
     margin: 15px 0;
 }
 

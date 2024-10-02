@@ -37,6 +37,23 @@ openBtn.addEventListener('click', function() {
     modal.classList.remove("close-toggle");
 });
 
+const agreeCheck = document.getElementById('personal');
+const inputForm = document.getElementById('input_form');
+const insertBtn = document.querySelector('.insert-btn');
+let check;
+
+agreeCheck.addEventListener('change', function() {
+    check = agreeCheck.checked;
+});
+
+inputForm.addEventListener('submit', function(event) {
+    if (!check) {
+        alert("이용확인 동의란에 체크해 주세요.");
+        event.preventDefault();
+        return false;
+    }
+});
+
 // 현재 위치 값을 저장할 객체
 let currentLocation = {
     lat: null,
@@ -90,4 +107,4 @@ let currentLocation = {
             mapDataControl: false,
         });
     }
-}); 
+});
