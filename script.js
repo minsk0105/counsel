@@ -108,3 +108,43 @@ let currentLocation = {
         });
     }
 });
+
+const inputName = document.getElementById('name');
+const inputPhone = document.getElementById('phone');
+const inputEmail = document.getElementById('email');
+const inputDate = document.getElementById('date');
+const textRequest = document.getElementById('request');
+const submitBtn = document.querySelector('.insert-btn');
+
+submitBtn.addEventListener('click', function(event) {
+    if (inputName.value === "" || inputPhone.value === "" ||
+        inputEmail.value === "" || inputDate.value === "" ||
+        textRequest.value === "") {
+
+            if (inputName.value === "" && inputPhone.value !== "" &&
+                inputEmail.value !== "" && inputDate.value !== "" &&
+                textRequest.value !== "") {
+                    alert("성명을 입력해 주세요.");
+                } else if (inputName.value !== "" && inputPhone.value === "" &&
+                    inputEmail.value !== "" && inputDate.value !== "" &&
+                    textRequest.value !== "") {
+                        alert("전화번호를 입력해 주세요.");
+                    } else if (inputName.value !== "" && inputPhone.value !== "" &&
+                        inputEmail.value === "" && inputDate.value !== "" &&
+                        textRequest.value !== "") {
+                            alert("이메일을 입력해 주세요.");
+                        } else if (inputName.value !== "" && inputPhone.value !== "" &&
+                            inputEmail.value !== "" && inputDate.value === "" &&
+                            textRequest.value !== "") {
+                                alert("예약일자를 입력해 주세요.");
+                            } else if (inputName.value !== "" && inputPhone.value !== "" &&
+                                inputEmail.value !== "" && inputDate.value !== "" &&
+                                textRequest.value === "") {
+                                    alert("문의하실 내용을 입력해 주세요.");
+                                } else {
+                                    alert("필수 정보를 입력해 주세요.");
+                                }
+            event.preventDefault();
+            return false;
+        }
+});

@@ -11,26 +11,31 @@
     $result = mysqli_query($conn, $read_sql);
 
     $list = '';
-    if ($saved_name === '') {
-        $list = "
+    $isset_row = mysqli_fetch_array($result);
+    if(!$isset_row) { ?>
+        <script>
+            alert("undefind value!!");
+            location.href = 'index.php';
+        </script>
+    <?php } else {
+        $list .= "
             <tr class=\"info-flex\">
-                <td></td>
-                <td>귀하께서는 구매상담 신청을 하지 않으셨습니다.</td>
-                <td></td>
+                <td>{$isset_row['method']}</td>
+                <td>{$isset_row['text']}</td>
+                <td>{$isset_row['date']}</td>
             </tr>
         ";
-    }
 
-    while ($row = mysqli_fetch_array($result)) {
-        $list = $list."
-            <tr class=\"info-flex\">
-                <td>{$row['method']}</td>
-                <td>{$row['text']}</td>
-                <td>{$row['date']}</td>
-            </tr>
-        ";
-    }
-?>
+        while ($row = mysqli_fetch_array($result)) {
+            $list .= "
+                <tr class=\"info-flex\">
+                    <td>{$row['method']}</td>
+                    <td>{$row['text']}</td>
+                    <td>{$row['date']}</td>
+                </tr>
+            ";
+        }
+    } ?>
 
 <!DOCTYPE html>
 <html lang="ko">
@@ -41,6 +46,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="view.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" type="image/png" sizes="32x32" href="https://static.interiorteacher.com/general/favicon_white_32.png">
 </head>
 <body>
         

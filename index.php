@@ -6,6 +6,7 @@
     <title>구매 상담 신청 폼</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" type="image/png" sizes="32x32" href="https://static.interiorteacher.com/general/favicon_white_32.png">
 </head>
 <body>
     
@@ -43,24 +44,24 @@
                     </dl>
                     <dl>
                         <dt>이름</dt>
-                        <dd><input type="text" name="name"></dd>
+                        <dd><input type="text" name="name" id="name"></dd>
                     </dl>
                     <dl>
                         <dt>연락처</dt>
-                        <dd><input type="text" name="phone" placeholder="ex) 01012345678"></dd>
+                        <dd><input type="text" name="phone" id="phone" placeholder="ex) 01012345678"></dd>
                     </dl>
                     <dl>
                         <dt>이메일</dt>
-                        <dd><input type="text" name="email" placeholder="consult@example.com"></dd>
+                        <dd><input type="text" name="email" id="email" placeholder="consult@example.com"></dd>
                     </dl>
                     <dl>
                         <dt>예약일자</dt>
-                        <dd><input type="text" name="date" placeholder="ex) 2024 - 00 - 00"></dd>
+                        <dd><input type="text" name="date" id="date" placeholder="ex) 2024 - 00 - 00"></dd>
                     </dl>
                     <dl>
                         <dt>무엇을 도와드릴까요?</dt>
                         <dd>
-                            <textarea name="request"></textarea>
+                            <textarea name="request" id="request"></textarea>
                         </dd>
                         <dd>
                             <p class="comment">
@@ -227,7 +228,7 @@
                 <p>구매상담 신청</p>
                 <div>
                     <span>Call: 1010-1010</span>
-                    <span>Address: 인천광역시 부평구 화랑로</span>
+                    <span>Address: 인천광역시 부평구 산곡3동 화랑로</span>
                     <span>Tel: 010-1111-2222</span><br>
                     <span>Company: (주)아이퀘스트</span><br>
                     <span>Copyright&copy;HRDKOREA LoremCompany 2024</span>
