@@ -1,0 +1,493 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    cursor: default;
+    font-family: 'GmarketSansMedium';
+    color: rgb(30, 30, 30);
+}
+
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+li {
+    list-style: none;
+    padding-left: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* 헤더 영역 */
+header {
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    padding: 0 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+    transition: 0.3s ease;
+}
+
+header:hover {
+    background-color: white;
+}
+
+.header_change {
+    background-color: white;
+}
+
+.header_change .header-left_menu > .logo path,
+.header_change .header-left_menu > ul > li > a,
+.header_change .header-right_menu path {
+    color: rgb(30, 30, 30);
+}
+
+header:hover .header-left_menu > .logo path,
+header:hover .header-left_menu > ul > li > a,
+header:hover .header-right_menu path {
+    color: rgb(30, 30, 30);
+}
+
+.header-left_menu {
+    display: flex;
+    align-items: center;
+}
+
+/* 로고 */
+.logo {
+    display: flex;
+    overflow: hidden;
+}
+
+.logo a {
+    display: flex;
+}
+
+.logo svg {
+    font-size: 20px;
+}
+
+.logo path {
+    color: #eee;
+}
+
+/* 네비게이션 메뉴 */
+.nav_menu {
+    display: flex;
+    overflow: hidden;
+    margin-left: 30px;
+}
+
+.nav_menu > li {
+    margin: 0 20px;
+}
+
+.nav_menu > li > a {
+    position: relative;
+    display: block;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+    height: 80px;
+    line-height: 85px;
+    color: #eee;
+}
+
+.nav_menu > li > a:hover {
+    color: #0072BB;
+}
+
+/* 서브메뉴 */
+.nav_submenu {
+    position: absolute;
+    width: 200px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin-left: -20px;
+    overflow: hidden;
+    transition: 0.3s ease-out;
+    height: 0;
+}
+
+.nav_submenu > li > a {
+    display: block;
+    padding-left: 20px;
+    height: 50px;
+    line-height: 55px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 14px;
+}
+
+.nav_submenu > li > a:hover {
+    color: #0072BB;
+}
+
+.nav_menu > li:hover .nav_submenu {
+    height: 150px;
+}
+
+/* 헤더 아이콘 */
+.header-right_menu {
+    display: flex;
+    align-items: center;
+}
+
+.header-right_menu a {
+    display: flex;
+}
+
+.header-right_menu svg {
+    font-size: 25px;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+.header-right_menu path {
+    cursor: pointer;
+    color: #eee;
+}
+
+/* 비주얼 메뉴 */
+.visual {
+    position: relative;
+    width: 100%;
+    height: 75vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.visual > img {
+    width: 100vw;
+    height: 100%;
+}
+
+/* 비주얼 텍스트 */
+.visual_container {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 100%;
+}
+
+.text-contents {
+    position: absolute;
+    top: 50%;
+    left: 80px;
+    transform: translateY(-50%);
+}
+
+.text-contents p {
+    text-transform: uppercase;
+    color: #eee;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.text-contents h1 {
+    color: #eee;
+    font-size: 45px;
+    font-weight: 200;
+}
+
+.button_menu {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: white;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.button_menu a {
+    position: relative;
+    padding: 10px 15px;
+    font-size: 16px;
+    font-weight: 200;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.button_menu a:nth-of-type(1)::before {
+    position: absolute;
+    content: "";
+    top: 15px;
+    right: -6px;
+    width: 1px;
+    height: 15px;
+    background-color: gray;
+}
+
+.button_menu a:hover {
+    color: #0072BB;
+}
+
+/* 메인 화면 */
+main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.main_container {
+    width: 1903px;
+    padding: 0 80px;
+}
+
+/* 고객사례 영역 */
+.consult_example {
+    width: 100%;
+    margin-top: 70px;
+}
+
+/* 섹션 타이틀 */
+.section_title {
+    display: block;
+}
+
+.section_title span {
+    color: #0072BB;
+}
+
+.section_title h2 {
+    font-size: 25px;
+    font-weight: 200;
+}
+
+.section_title h3 {
+    margin-top: 15px;
+    font-size: 20px;
+    font-weight: 200;
+}
+
+/* 고객사례 콘텐츠 */
+.example_contents {
+    width: 100%;
+    margin-top: 15px;
+}
+
+.example_options {
+    width: 100%;
+    height: 50px;
+    border-bottom: 1px solid rgb(196, 196, 196);
+    display: flex;
+    align-items: center;
+}
+
+.example_options ul {
+    display: flex;
+    align-items: center;
+}
+
+.example_options ul > li {
+    position: relative;
+    margin-right: 30px;
+    font-size: 16px;
+    font-weight: 200;
+    height: 50px;
+    line-height: 55px;
+    cursor: pointer;
+    color: gray;
+}
+
+.example_options ul > li:nth-of-type(1) {
+    color: rgb(30, 30, 30);
+}
+
+.example_options ul > li:nth-of-type(1)::before {
+    position: absolute;
+    content: "";
+    bottom: -.5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #0072BB;
+}
+
+.example_list {
+    width: 100%;
+    margin-top: 25px;
+    display: flex;
+    /* justify-content: space-between; */
+}
+
+.example_box {
+    width: 320px;
+    height: 230px;
+    overflow: hidden;
+    margin-right: 36px;
+}
+
+.example_box:nth-last-of-type(1) {
+    margin-right: 0;
+}
+
+.example_box img {
+    width: 100%;
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.example_comment {
+    position: relative;
+    margin-top: 10px;
+}
+
+.example_comment p {
+    font-size: 13px;
+    font-weight: 200;
+}
+
+.example_comment span {
+    display: block;
+    font-size: 12px;
+    font-weight: 200;
+}
+
+.example_comment svg {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    font-size: 35px;
+    font-weight: 200;
+    cursor: pointer;
+}
+
+.example_comment path {
+    color: gray;
+    cursor: pointer;
+}
+
+/* 푸터 메뉴 */
+footer {
+    width: 100%;
+    height: 350px;
+    background-color: rgb(5, 5, 5);
+    padding: 40px 80px;
+}
+
+.footer-top {
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+/* 문의사항 영역 */
+.inquiry_button {
+    display: flex;
+}
+
+.inquiry_button button {
+    width: 200px;
+    height: 50px;
+    line-height: 55px;
+    border: 1px solid gray;
+    background-color: rgb(5, 5, 5);
+    color: #eee;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.inquiry_button button:nth-of-type(1) {
+    background-color: gray;
+}
+
+/* 카테고리 정보 */
+.category {
+    width: 450px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* 고객센터 */
+.customer p,
+.guide p {
+    color: #eee;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.customer span {
+    display: block;
+    font-size: 14px;
+    color: gray;
+    line-height: 25px;
+}
+
+/* 가이드 */
+.guide a {
+    display: block;
+    color: #eee;
+    cursor: pointer;
+    line-height: 25px;
+    font-size: 14px;
+}
+
+/* 소셜 아이콘 */
+.social_icon {
+    display: flex;
+}
+
+.social_icon i {
+    font-size: 25px;
+    margin-left: 15px;
+    color: gray;
+    cursor: pointer;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    overflow: hidden;
+    border-top: 1px solid gray;
+}
+
+.footer-bottom p {
+    margin-top: 10px;
+}
+
+.footer-bottom span {
+    position: relative;
+    color: gray;
+    font-size: 14px;
+    margin-right: 20px;
+}
+
+.footer-bottom span::before {
+    position: absolute;
+    content: "";
+    top: 1px;
+    right: -12px;
+    width: 1px;
+    height: 11px;
+    background-color: gray;
+}
+
+.footer-bottom span:nth-last-of-type(1)::before,
+.footer-bottom span:nth-last-of-type(2)::before {
+    width: 0;
+}
