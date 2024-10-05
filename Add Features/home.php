@@ -100,6 +100,7 @@
 
         <div class="main_container">
 
+            <!-- 고객사례 영역 -->
             <section class="consult_example">
 
                 <!-- 섹션 타이틀 -->
@@ -180,8 +181,87 @@
                             </div>
                         </div>
                     </div>
+
+                    <div class="more-example_button">
+                        <a href="#">사례 더보기 ></a>
+                    </div>
                 </div>
                 
+            </section>
+
+            <!-- 가구 스타일링 영역 -->
+            <section class="styling">
+
+                <!-- 섹션 타이틀 -->
+                <div class="section_title">
+                    <h2>
+                        가구와 스타일링을 <span>한 번에</span>
+                    </h2>
+                </div>
+
+                <!-- 가구 스타일링 콘텐츠 -->
+                <div class="styling_contents">
+                    <div class="example_options">
+                        <ul>
+                            <li>거실</li>
+                            <li>다이닝</li>
+                            <li>침실</li>
+                            <li>서재</li>
+                        </ul>
+                    </div>
+
+                    <div class="styling_list">
+                        <div class="styling_box">
+                            <img src="https://static.interiorteacher.com/portfolio/846/PIN/6516516520240911205437_6.jpg" alt="">
+                            <div class="use-item_list">
+                                <div class="use-item_box">
+                                    <img src="https://interiorteacher.com/_next/image?url=https%3A%2F%2Fstatic.interiorteacher.com%2Fmall%2Fproduct%2F21683%2Fcover-image%2F11png20240924100635_10.png&w=256&q=75" alt="">
+                                </div>
+                                <div class="use-item_box">
+                                    <img src="https://interiorteacher.com/_next/image?url=https%3A%2F%2Fstatic.interiorteacher.com%2Fmall%2Fproduct%2F22664%2Fcover-image%2F20240429105737_4.png&w=256&q=75" alt="">
+                                </div>
+                                <div class="use-item_box">
+                                    <img src="https://interiorteacher.com/_next/image?url=https%3A%2F%2Fstatic.interiorteacher.com%2Fmall%2Fproduct%2F21247%2Fcover-image%2F%EA%B0%80%EC%9D%B4%EB%93%9C2png20231023152238_7.png&w=256&q=75" alt="">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="styling_box">
+                            <img src="https://static.interiorteacher.com/portfolio/815/PIN/113png20240911204359_8.jpg" alt="">
+                            <div class="use-item_list">
+                                <div class="use-item_box">
+                                    <img src="https://interiorteacher.com/_next/image?url=https%3A%2F%2Fstatic.interiorteacher.com%2Fmall%2Fproduct%2F20896%2Fcover-image%2Fsmall4p20230829155630_2.png&w=256&q=75" alt="">
+                                </div>
+                                <div class="use-item_box">
+                                    <img src="https://interiorteacher.com/_next/image?url=https%3A%2F%2Fstatic.interiorteacher.com%2Fmall%2Fproduct%2Frenewal-230112%2F1239_jackson_cover3.png&w=256&q=75" alt="">
+                                </div>
+                                <div class="use-item_box">
+                                    <img src="https://interiorteacher.com/_next/image?url=https%3A%2F%2Fstatic.interiorteacher.com%2Fmall%2Fproduct%2F34130%2Fcover-image%2F128020240806163135_10.png&w=256&q=75" alt="">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="styling_box">
+                            <img src="https://static.interiorteacher.com/portfolio/882/PIN/6516516620240911204713_6.jpg" alt="">
+                            <div class="use-item_list">
+                                <div class="use-item_box">
+                                    <img src="https://interiorteacher.com/_next/image?url=https%3A%2F%2Fstatic.interiorteacher.com%2Fmall%2Fproduct%2F34980%2Fcover-image%2F1212png20240924101005_2.png&w=256&q=75" alt="">
+                                </div>
+                                <div class="use-item_box">
+                                    <img src="https://interiorteacher.com/_next/image?url=https%3A%2F%2Fstatic.interiorteacher.com%2Fmall%2Fproduct%2F34981%2Fcover-image%2F80020240924101244_8.png&w=256&q=75" alt="">
+                                </div>
+                                <div class="use-item_box">
+                                    <img src="https://interiorteacher.com/_next/image?url=https%3A%2F%2Fstatic.interiorteacher.com%2Fmall%2Fproduct%2F34999%2Fcover-image%2F1png20240924101342_10.png&w=256&q=75" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="more-example_button">
+                        <a href="#">스타일링 가구 더보기 ></a>
+                    </div>
+                </div>
+
             </section>
 
         </div>
@@ -206,11 +286,15 @@
                 </div>
 
                 <div class="guide">
-                    <p>이용안내</p>
-                    <a href="#">자주 묻는 질문</a>
-                    <a href="#">취소 & 환불약관</a>
-                    <a href="#">이용약관</a>
-                    <a href="#">개인정보처리방침</a>
+                    <p id="guide_btn">이용안내</p>
+                    <div class="guide-menu">
+                        <a href="#">자주 묻는 질문</a>
+                        <a href="#">취소 & 환불약관</a>
+                        <a href="#">이용약관</a>
+                        <a href="#">개인정보처리방침</a>
+                    </div>
+                    <i class="fa-solid fa-plus" id="plus"></i>
+                    <i class="fa-solid fa-minus" id="minus"></i>
                 </div>
             </div>
 
@@ -224,16 +308,23 @@
 
         <div class="footer-bottom">
             <p>
-                <span>주식회사 인테리어티쳐</span>
-                <span>대표: 텍스트</span>
-                <span>주소: 서울특별시 서초구 방배중앙로 24 4-5층</span>
-                <span>사업자등록번호: 000-00-00000</span>
-                <span>통신판매업신고번호: 2021-서울서초-3345</span>
-                <span>이메일: info@example.com</span><br>
+                <span class="footer-company_info">주식회사 인테리어티쳐</span>
+                <span class="footer-company_info">대표: 텍스트</span>
+                <span class="footer-company_info">주소: 서울특별시 서초구 방배중앙로 24 4-5층</span>
+                <span class="footer-company_info">사업자등록번호: 000-00-00000</span>
+                <span class="footer-company_info">통신판매업신고번호: 2021-서울서초-3345</span>
+                <span class="footer-company_info">이메일: info@example.com</span><br>
                 <span>&copy;2024 LoremCompany. All Rights Reserved.</span>
             </p>
         </div>
     </footer>
+
+    <!-- top 버튼 -->
+    <a href="#" class="top">
+        <svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="fill-black-950">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M19.7936 11.5L11.6535 3.35343L12.3609 2.64661L21.7068 12L12.3609 21.3534L11.6536 20.6466L19.7936 12.5L3 12.5V11.5L19.7936 11.5Z" fill="current"></path>
+        </svg>
+    </a>
 
     <script src="counsel.js"></script>
 </body>

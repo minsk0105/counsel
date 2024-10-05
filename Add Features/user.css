@@ -1,0 +1,186 @@
+header {
+    background-color: white;
+}
+
+header .header-left_menu > .logo path,
+header .header-left_menu > ul > li > a,
+header .header-right_menu path {
+    color: rgb(30, 30, 30);
+}
+
+/* 메인 화면 */
+.main {
+    padding-top: 60px;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    overflow: hidden;
+}
+
+.input_form,
+.img_box {
+    width: 50vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.user_box {
+    width: 400px;
+    height: 500px;
+    padding: 0 20px;
+}
+
+.kakao_login,
+.naver_login {
+    display: block;
+    width: 100%;
+    padding: 20px 15px;
+    display: flex;
+    justify-content: center;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.kakao_login {
+    background-color: #f9e000;
+}
+
+.naver_login {
+    margin-top: 15px;
+    background-color: #4fa42b;
+}
+
+.naver_login span {
+    color: #eee;
+}
+
+.user_box a > svg {
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.user_box path {
+    cursor: pointer;
+}
+
+.user_box a > span {
+    cursor: pointer;
+}
+
+.user_line {
+    width: 100%;
+    height: 1px;
+    background-color: rgb(196, 196, 196);
+    margin: 40px 0;
+}
+
+.user_title {
+    display: block;
+    text-align: center;
+}
+
+/* 입력 폼 */
+form {
+    margin-top: 40px;
+}
+
+form > div {
+    width: 100%;
+    height: 74px;
+    padding: 15px;
+    border: 1px solid rgb(196, 196, 196);
+    border-radius: 15px;
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+
+form label {
+    display: block;
+    font-size: 12px;
+    color: gray;
+}
+
+form input {
+    width: 100%;
+    margin-top: 5px;
+    font-size: 16px;
+    border: none;
+}
+
+form input::placeholder {
+    color: rgb(196, 196, 196);
+}
+
+form input:focus {
+    outline: none;
+}
+
+.submit {
+    width: 100%;
+    height: 64px;
+    border-radius: 15px;
+    background-color: rgb(30, 30, 30);
+    color: #eee;
+    margin: 0;
+    cursor: pointer;
+}
+
+.other_button {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.other_button p {
+    display: flex;
+}
+
+.other_button p > a {
+    width: 100px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    border: 1px solid rgb(196, 196, 196);
+    font-size: 12px;
+    margin-right: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.other_button > a {
+    width: 80px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    border: 1px solid rgb(196, 196, 196);
+    font-size: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.img_box img {
+    width: 100%;
+    height: 100vh;
+}
+
+footer {
+    margin: 0;
+}
+
+@media screen and (max-width: 930px) {
+    .input_form {
+        width: 100%;
+    }
+
+    .img_box {
+        width: 0;
+    }
+
+    .img_box img {
+        display: none;
+    }
+}

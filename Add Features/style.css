@@ -7,6 +7,10 @@
     color: rgb(30, 30, 30);
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 @font-face {
     font-family: 'GmarketSansMedium';
     src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
@@ -22,6 +26,10 @@ li {
 a {
     text-decoration: none;
     color: inherit;
+}
+
+body {
+    scroll-snap-type: y mandatory;
 }
 
 /* 헤더 영역 */
@@ -161,8 +169,8 @@ header:hover .header-right_menu path {
 /* 비주얼 메뉴 */
 .visual {
     position: relative;
-    width: 100%;
-    height: 75vh;
+    max-width: 100%;
+    max-height: 75vh;
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -171,7 +179,6 @@ header:hover .header-right_menu path {
 
 .visual > img {
     width: 100vw;
-    height: 100%;
 }
 
 /* 비주얼 텍스트 */
@@ -180,15 +187,15 @@ header:hover .header-right_menu path {
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 100%;
-    height: 100%;
+    min-width: 100%;
+    min-height: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
 }
 
 .text-contents {
-    position: absolute;
-    top: 50%;
-    left: 80px;
-    transform: translateY(-50%);
+    padding-left: 80px;
 }
 
 .text-contents p {
@@ -247,7 +254,8 @@ main {
 }
 
 .main_container {
-    width: 1903px;
+    min-width: 1200px;
+    max-width: 1903px;
     padding: 0 80px;
 }
 
@@ -329,10 +337,11 @@ main {
 }
 
 .example_box {
-    width: 320px;
+    /* width: 320px; */
+    width: 17.5vw;
     height: 230px;
     overflow: hidden;
-    margin-right: 36px;
+    margin-right: 1vw;
 }
 
 .example_box:nth-last-of-type(1) {
@@ -341,7 +350,8 @@ main {
 
 .example_box img {
     width: 100%;
-    height: 180px;
+    height: 10vw;
+    max-height: 180px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -353,14 +363,22 @@ main {
 }
 
 .example_comment p {
+    width: 13vw;
     font-size: 13px;
     font-weight: 200;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 .example_comment span {
+    width: 13vw;
     display: block;
     font-size: 12px;
     font-weight: 200;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 .example_comment svg {
@@ -378,17 +396,98 @@ main {
     cursor: pointer;
 }
 
+/* 사례 더보기 버튼 */
+.more-example_button {
+    margin-top: 25px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.more-example_button a {
+    width: 300px;
+    padding: 15px 35px;
+    text-align: center;
+    border: 1px solid rgb(196, 196, 196);
+    border-radius: 40px;
+    cursor: pointer;
+}
+
+/* 가구 스타일링 영역 */
+.styling {
+    width: 100%;
+    margin-top: 70px;
+}
+
+.styling_contents {
+    width: 100%;
+    margin-top: 15px;
+}
+
+/* 스타일링 콘텐츠 */
+.styling_list {
+    width: 100%;
+    margin-top: 25px;
+    display: flex;
+    overflow: hidden;
+}
+
+.styling_box {
+    width: 560px;
+    margin-right: 32px;
+    overflow: hidden;
+}
+
+.styling_box img {
+    width: 100%;
+    max-height: 560px;
+}
+
+.styling_box:nth-last-of-type(1) {
+    margin-right: 0;
+}
+
+.use-item_list {
+    width: 100%;
+    max-height: 180px;
+    display: flex;
+    overflow: hidden;
+}
+
+.use-item_box {
+    max-width: 180px;
+    max-height: 180px;
+    margin-right: 10px;
+    background-color: #f7eeeb;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.use-item_box img {
+    width: 100%;
+    height: 100%;
+}
+
+.use-item_box:nth-last-of-type(1) {
+    margin-right: 0;
+}
+
 /* 푸터 메뉴 */
 footer {
+    margin-top: 70px;
     width: 100%;
-    height: 350px;
+    min-height: 350px;
     background-color: rgb(5, 5, 5);
     padding: 40px 80px;
 }
 
 .footer-top {
     width: 100%;
-    height: 150px;
+    /* height: 150px; */
     display: flex;
     justify-content: space-between;
     overflow: hidden;
@@ -445,6 +544,10 @@ footer {
     font-size: 14px;
 }
 
+.guide i {
+    display: none;
+}
+
 /* 소셜 아이콘 */
 .social_icon {
     display: flex;
@@ -490,4 +593,249 @@ footer {
 .footer-bottom span:nth-last-of-type(1)::before,
 .footer-bottom span:nth-last-of-type(2)::before {
     width: 0;
+}
+
+/* top 버튼 */
+.top {
+    position: fixed;
+    bottom: 45px;
+    right: 15px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border: 1px solid rgb(196, 196, 196);
+    cursor: pointer;
+    transition: 0.3s ease;
+    overflow: hidden;
+    visibility: hidden;
+    opacity: 0;
+    scroll-snap-align: start;
+}
+
+.visible_top {
+    visibility: visible;
+    opacity: 1;
+}
+
+.top svg {
+    font-size: 25px;
+    cursor: pointer;
+    transform: rotate(-90deg);
+}
+
+.top path {
+    fill: rgb(30, 30, 30);
+    cursor: pointer;
+}
+
+/* 푸터 반응형 */
+@media screen and (max-width: 1225px) {
+    .footer-top {
+        display: block;
+    }
+
+    .inquiry_button {
+        display: block;
+    }
+
+    .inquiry_button button {
+        width: 100%;
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .category {
+        width: 100%;
+        display: block;
+    }
+
+    .customer p {
+        margin-top: 25px;
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    .customer span {
+        position: relative;
+        display: inline-block;
+        margin-right: 20px;
+    }
+
+    .guide {
+        position: relative;
+        margin: 25px 0;
+    }
+
+    .guide p {
+        width: 100%;
+        padding-bottom: 10px;
+        border-bottom: 0.5px solid rgb(40, 40, 40);
+    }
+
+    .guide-menu {
+        overflow: hidden;
+        height: 0;
+        transition: 0.3s ease-out;
+    }
+    
+    .drop-up {
+        height: 100px;
+    }
+
+    .guide i {
+        position: absolute;
+        top: 0;
+        right: 20px;
+        font-size: 20px;
+        color: gray;
+        display: block;
+        cursor: pointer;
+    }
+
+    #minus {
+        display: none;
+    }
+
+    .social_icon i {
+        margin-left: 0;
+        margin-right: 15px;
+    }
+
+    .footer-bottom p {
+        margin-top: 0;
+    }
+
+    .footer-company_info {
+        display: none;
+    }
+}
+
+/* 메인 섹션 반응형 */
+@media screen and (max-width: 1150px) {
+    header {
+        padding: 0 20px;
+    }
+
+    .main_container {
+        min-width: 700px;
+        padding: 0 20px;
+    }
+
+    .example_box {
+        min-width: 320px;
+        min-height: 230px;
+    }
+
+    .example_box img {
+        min-height: 320px;
+        min-height: 180px;
+    }
+
+    .example_comment p,
+    .example_comment span {
+        width: 260px;
+    }
+}
+
+/* 비주얼 이미지 반응형 */
+@media screen and (max-width: 1350px) {
+    .visual img {
+        width: 100vw;
+        height: 100%;
+    }
+}
+
+@media screen and (max-width: 930px) {
+    .logo svg {
+        font-size: 16px;
+    }
+
+    .nav_menu {
+        display: none;
+    }
+
+    .header-right_menu a {
+        display: none;
+    }
+    
+    .header-right_menu svg {
+        font-size: 20px;
+    }
+
+    .visual {
+        height: 428px;
+    }
+
+    .visual > img {
+        min-width: 930px;
+    }
+
+    .visual_container {
+        align-items: end;
+        padding-bottom: 20px;
+    }
+
+    .text-contents {
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .text-contents p {
+        font-size: 15px;
+    }
+    
+    .text-contents h1 {
+        font-size: 25px;
+    }
+
+    .button_menu a {
+        width: 50%;
+        text-align: center;
+    }
+
+    .styling_box {
+        min-width: 100%;
+    }
+
+    .styling_box img {
+        max-width: 100%;
+        max-height: 890px;
+    }
+
+    .use-item_list {
+        max-height: 140px;
+    }
+
+    .use-item_box {
+        max-width: 140px;
+        max-height: 140px;
+    }
+
+    footer {
+        padding: 20px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .main_container {
+        min-width: 360px;
+    }
+
+    .example_options {
+        min-width: 660px;
+    }
+}
+
+@media screen and (max-width: 470px) {
+    .section_title h2 {
+        font-size: 20px;
+    }
+
+    .section_title h3 {
+        font-size: 16px;
+    }
 }
