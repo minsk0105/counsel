@@ -5,9 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>구매상담 신청 폼</title>
     <link rel="stylesheet" href="CSS/style.css">
-    <link rel="stylesheet" href="CSS/user.css">
+    <link rel="stylesheet" href="CSS/counsel.css">
     <link rel="icon" type="image/png" sizes="32x32" href="https://static.interiorteacher.com/general/favicon_white_32.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .button_menu button:hover {
+            color: #0072BB;
+        }
+    </style>
 </head>
 <body>
 
@@ -77,57 +82,186 @@
         </div>
     </header>
 
-    <!-- 로그인 메인 화면 -->
-    <section class="main">
-        
-        <div class="input_form">
+    <!-- 비주얼 메뉴 -->
+    <section class="visual">
+        <img src="https://interiorteacher.com/_next/image?url=https%3A%2F%2Fstatic.interiorteacher.com%2Fwidget%2Fmain%2Fbackground%2F43%2Fundefined%EA%B7%B8%EB%9D%BC%EB%8D%B0_pc_52749486.jpg&w=1920&q=80" alt="visual-img">
 
-            <div class="user_box">
-                <a href="#" class="kakao_login">
-                    <svg width="24" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M12.4951 3C6.97953 3 2.5 6.53572 2.5 10.8844C2.5 13.5876 4.21682 15.9676 6.84139 17.3878L6.12111 21.2369C6.08165 21.4328 6.29872 21.5699 6.46645 21.4622L10.7585 18.6512C10.7585 18.6512 11.9031 18.7687 12.5049 18.7687C18.0205 18.7687 22.5 15.233 22.5 10.8844C22.4901 6.53572 18.0205 3 12.4951 3Z" fill="#3C1E1E"></path>
-                        <path d="M8.41778 8.60352H5.5522C5.28724 8.60352 5.06152 8.81942 5.06152 9.0942C5.06152 9.36898 5.27742 9.58488 5.5522 9.58488H6.4845V13.0393C6.4845 13.1669 6.53357 13.2846 6.62189 13.3729C6.71021 13.4613 6.82798 13.5103 6.95555 13.5103H7.0635C7.19108 13.5103 7.30884 13.4613 7.39717 13.3729C7.48549 13.2846 7.53456 13.157 7.53456 13.0295V9.57506H8.41778C8.68275 9.57506 8.90846 9.35916 8.90846 9.08438C8.90846 8.81942 8.69256 8.60352 8.41778 8.60352Z" fill="#F9E000"></path>
-                        <path d="M15.1201 12.598H13.7855V9.06509C13.7855 8.77068 13.5499 8.53516 13.2555 8.53516C12.9611 8.53516 12.7256 8.77068 12.7256 9.06509V12.8728C12.7256 12.9022 12.7256 13.0102 12.7256 13.0396C12.7256 13.2849 12.9219 13.4812 13.1672 13.4812H15.1201C15.3654 13.4812 15.5617 13.2849 15.5617 13.0396C15.5617 12.7943 15.3654 12.598 15.1201 12.598Z" fill="#F9E000"></path>
-                        <path d="M19.3995 12.7648L17.9176 10.8021L19.2621 9.44777C19.4486 9.26132 19.4486 8.96691 19.2621 8.78045C19.0757 8.59399 18.7812 8.59399 18.6046 8.78045L16.9461 10.4586V9.07486C16.9461 8.78045 16.7106 8.54492 16.4162 8.54492C16.1218 8.54492 15.8862 8.78045 15.8862 9.07486V13.0003C15.8862 13.2947 16.1218 13.5302 16.4162 13.5302C16.7106 13.5302 16.9461 13.2947 16.9461 13.0003V11.7834L17.2503 11.4792L18.6537 13.334C18.8107 13.5401 19.1051 13.5891 19.3112 13.4321C19.5173 13.2653 19.5565 12.9709 19.3995 12.7648Z" fill="#F9E000"></path>
-                        <path d="M12.4216 12.8924L10.9889 8.95709C10.9005 8.72157 10.6356 8.54492 10.3215 8.54492C10.243 8.54492 10.1645 8.55474 10.0958 8.57436C10.0271 8.59399 9.95842 8.62343 9.89954 8.66269C9.84066 8.70194 9.79159 8.75101 9.74252 8.80008C9.71308 8.83933 9.69345 8.87859 9.67383 8.91784C9.6542 8.95709 9.5855 9.15337 9.56588 9.22206C9.55606 9.24169 9.54625 9.26132 9.54625 9.29076C9.53643 9.3202 9.52662 9.33983 9.51681 9.36927C9.50699 9.39871 9.49718 9.42815 9.48737 9.45759C9.47755 9.48703 9.45793 9.52628 9.44811 9.55573C9.4383 9.59498 9.41867 9.63423 9.40886 9.66367C9.38923 9.70293 9.37942 9.74218 9.35979 9.78144C9.34016 9.82069 9.33035 9.86976 9.31072 9.90902C9.29109 9.95808 9.28128 9.99734 9.26165 10.0464C9.24203 10.0955 9.2224 10.1445 9.21259 10.1838C9.19296 10.2329 9.17333 10.2819 9.1537 10.331C9.13408 10.3801 9.11445 10.4291 9.09482 10.4782C9.07519 10.5273 9.05557 10.5763 9.03594 10.6352C9.01631 10.6843 8.99669 10.7432 8.97706 10.7922C8.95743 10.8413 8.9378 10.9002 8.91818 10.9493C8.89855 10.9983 8.87892 11.0572 8.85929 11.1063C8.83967 11.1553 8.82004 11.2142 8.80041 11.2633C8.78079 11.3124 8.76116 11.3712 8.74153 11.4203C8.7219 11.4694 8.70228 11.5184 8.68265 11.5773C8.66302 11.6264 8.6434 11.6755 8.62377 11.7245C8.60414 11.7736 8.58451 11.8227 8.5747 11.8717C8.55507 11.9208 8.54526 11.9601 8.52563 12.0091C8.50601 12.0484 8.49619 12.0975 8.47656 12.1367C8.45694 12.176 8.44712 12.2152 8.4275 12.2643C8.41768 12.3035 8.39806 12.3428 8.38824 12.382C8.37843 12.4213 8.3588 12.4507 8.34899 12.49C8.33917 12.5194 8.32936 12.5587 8.30973 12.5881C8.29992 12.6176 8.29011 12.647 8.28029 12.6765C8.27048 12.6961 8.26066 12.7255 8.25085 12.7452C8.24104 12.7648 8.23122 12.7844 8.23122 12.804C8.22141 12.8237 8.22141 12.8335 8.2116 12.8531C8.2116 12.8629 8.20178 12.8727 8.20178 12.8825C8.20178 12.8924 8.20178 12.8924 8.19197 12.9022C8.10365 13.1475 8.23122 13.4223 8.48638 13.5106C8.73172 13.5989 9.0065 13.4714 9.09482 13.2162L9.34016 12.5194H11.2931L11.5384 13.2162C11.6267 13.4615 11.8917 13.5989 12.1469 13.5106C12.3726 13.4125 12.5001 13.1377 12.4216 12.8924ZM9.63457 11.6166L10.2921 9.73237C10.3019 9.73237 10.3019 9.73237 10.3117 9.73237L10.9692 11.6166H9.63457Z" fill="#F9E000"></path>
-                    </svg>
-                    <span>카카오로 계속하기</span>
-                </a>
-                <a href="#" class="naver_login">
-                    <svg width="24" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M15.3441 12.4958L9.41585 4H4.5V19.8643H9.6559V11.3686L15.5841 19.8643H20.5V4H15.3441V12.4958Z" fill="white"></path>
-                    </svg>
-                    <span>네이버로 계속하기</span>
-                </a>
-                <div class="user_line"></div>
-                <p class="user_title">아이디/비밀번호 로그인 하기</p>
-
-                <form action="" method="post">
-                    <div class="id-box">
-                        <label>아이디</label>
-                        <input type="text" name="id" placeholder="아이디를 입력해 주세요.">
-                    </div>
-                    <div class="password-box">
-                        <label>비밀번호</label>
-                        <input type="password" name="password" placeholder="비밀번호를 입력해 주세요.">
-                    </div>
-                    <input type="submit" value="로그인" class="submit">
-                </form>
-                <div class="other_button">
-                    <p class="find_user-info">
-                        <a href="#">아이디 찾기</a>
-                        <a href="#">비밀번호 찾기</a>
-                    </p>
-                    <a href="#">회원가입</a>
+        <div class="visual_container">
+            <div class="text-contents">
+                <p>구매 컨설팅</p>
+                <h1>
+                    구매상담 신청
+                </h1>
+                <div class="button_menu">
+                    <a href="#main">구매상담 신청</a>
+                    <button type="button" style="
+                    border: none;
+                    background-color: inherit;
+                    font-size: 16px;
+                    font-weight: 200;
+                    padding: 10px 15px;
+                    display: inline-block;
+                    cursor: pointer;
+                    transition: 0.3s;
+                    " id="view-list_button">비회원 신청 조회</button>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 로그인 메인 화면 -->
+    <section class="main" id="main">
+        <div class="consult_container">
+            
+            <section class="consult_title">
+                <h1>구매상담 신청</h1>
+                <p>
+                    상담 요청을 주시면 업무시간 기준 1시간 내에<br>
+                    고객님께 상담전화를 드립니다.
+                </p>
+                <h2>1010-8080</h2>
+            </section>
+
+            <section class="user-counsel">
+                <!-- 상담유형 -->
+                <dl>
+                    <dt>상담유형</dt>
+                    <dd>
+                        <input type="radio" name="way" value="전화상담" checked><span>전화상담</span>
+                        <input type="radio" name="way" value="방문상담"><span>방문상담</span>
+                    </dd>
+                </dl>
+
+                <!-- 이름 -->
+                <dl>
+                    <dt>이름</dt>
+                    <dd><input type="text" name="name" id="name" placeholder="이름"></dd>
+                </dl>
+
+                <!-- 휴대전화 번호 -->
+                <dl>
+                    <dt>휴대전화 번호</dt>
+                    <dd><input type="text" name="phone" id="phone" placeholder="01012345678"></dd>
+                </dl>
+
+                <!-- 이메일 -->
+                <dl>
+                    <dt>이메일</dt>
+                    <dd><input type="text" name="email" id="email" placeholder="consult@example.com"></dd>
+                </dl>
+
+                <!-- 예약일자 -->
+                <dl>
+                    <dt>예약일자</dt>
+                    <dd><input type="text" name="date" id="date" placeholder="2024-00-00"></dd>
+                </dl>
+
+                <!-- 문의사항 -->
+                <dl>
+                    <dt>문의사항</dt>
+                    <dd><textarea name="request" id="request"></textarea></dd>
+                    <dd>
+                        <p class="request-comment">
+                            원하시는 상담 시간이 있는 경우에는 희망시간을 함께<br>
+                            남겨주시기 바랍니다.
+                        </p>
+                    </dd>
+                </dl>
+
+                <!-- 개인정보처리방침 -->
+                <dl style="position: relative;">
+                    <dt class="personal-dd">
+                        <p>개인정보 취급방침 (필수)</p>
+                        <p><input type="checkbox" name="agree" id="agree">이용약관 동의</p>
+                    </dt>
+                    <dd>
+                        <p class="rule-info">
+                            (주)LoremCompany(이하 “회사”라 함)은 통신비밀보호법, 전기통신사업법, 정보통신망 이용촉진 및 정보보호 등에 관한 법률 등 정보통신서비스제공자가 준수하여야 할 관련 법령상의 개인정보보호 규정을 준수하며, 관련 법령에 의거한 개인정보처리방침을 정하여 이용자 권익 보호에 최선을 다하고 있습니다. 회사의 개인정보처리방침은 관련 법률 및 지침에 따라 변경될 수 있고 개정의 경우 7일전에 홈페이지를 통해 고지할 것 입니다. 회사의 개인정보처리방침은 다음과 같은 내용을 담고 있습니다.<br><br>
+                                                        
+                            1. 수집하는 개인정보의 항목<br>
+                            회사는 회원가입, 상담, 서비스 신청 및 제공 등을 위해 아래와 같은 개인정보를 수집하고 있습니다.<br><br>
+                                                    
+                            - 이름, 연락처, 이메일주소 등<br>
+                            또한 서비스 이용과정이나 사업 처리 과정에서 아래와 같은 정보들이 생성되어 수집될 수 있습니다.<br><br>
+                                                    
+                            - 서비스 이용기록, 접속 로그, 쿠키, 접속 IP 정보, 방문일시, 브라우저종류 및 os, 검색어, 결제기록, 이용정지기록, 상담기록<br><br>
+                                                    
+                            2. 개인정보의 수집 및 이용목적<br>
+                            회사는 수집한 개인정보를 다음의 목적을 위해 활용합니다.<br><br>
+                                                    
+                            가. 서비스 제공에 관한 계약 이행 및 서비스 제공에 따른 요금정산<br>
+                            콘텐츠 제공, 물품배송 또는 청구서 등 발송, 금융거래 본인 인증 및 금융 서비스, 구매 및 요금 결재, 요금추심<br><br>
+                                                    
+                            나. 회원 관리<br>
+                            회원제 서비스 이용에 따른 본인확인, 개인식별, 불량회원의 부정 이용 방지와 비인가 사용 방지, 가입 의사 확인, 가입 및 가입횟수 제한, 만14세 미만 아동 개인정보 수집 시 법정 대리인 동의여부 확인, 추후 법정 대리인 본인확인, 분쟁 조정을 위한 기록보존, 불만처리 등 민원처리, 고지사항 전달<br><br>
+                                                    
+                            다. 마케팅 및 광고에 활용<br>
+                            신규 서비스(제품) 개발 및 특화, 인구통계학적 특성에 따른 서비스 제공 및 광고 게재, 접속 빈도 파악, 회원의 서비스 이용에 대한 통계, 이벤트 등 광고성 정보 전달<br><br>
+                                                    
+                            3. 개인정보의 보유/이용기간<br>
+                            이용자의 개인정보는 원칙적으로 개인정보의 수집 및 이용목적이 달성되면 지체 없이 파기합니다.<br>
+                            단, 다음의 정보에 대해서는 아래의 이유로 명시한 기간 동안 보존합니다.<br><br>
+                                                    
+                            가. 회사 내부 방침에 의한 정보보유 사유<br>
+                            - 부정이용기록<br>
+                              보존 이유 : 부정 이용 방지<br>
+                              보존 기간 : 1년<br><br>
+                                                    
+                            나. 관련법령에 의한 정보보유 사유<br>
+                            상법, 전자상거래 등에서의 소비자보호 관한 법률 등 관계법령의 규정에 의하여 보존할 필요가 있는 경우 회사는 관계법령에서 정한 일정한 기간 동안 회원정보를 보관합니다. 이 경우 회사는 보관하는 정보를 그 보관의 목적으로만 이용하며 보존기간은 아래와 같습니다. <br><br>
+                                                    
+                            - 계약 또는 청약철회 등에 관한 기록<br>
+                              보존 이유 : 전자상거래 등에서의 소비자보호에<br>
+                              관한 법률<br>
+                              보존 기간 : 5년<br><br>
+                                                    
+                            - 대금결제 및 재화 등의 공급에 관한 기록<br>
+                              보존 이유 : 전자상거래 등에서의 소비자보호에<br>
+                              관한 법률<br>
+                              보존 기간 : 5년<br><br>
+                                                    
+                            - 소비자의 불만 또는 분쟁처리에 관한 기록<br>
+                              보존 이유 : 전자상거래 등에서의 소비자보호에<br>
+                              관한 법률<br>
+                              보존 기간 : 3년<br><br>
+                                                    
+                            - 본인확인에 관한 기록<br>
+                              보존 이유 : 정보통신 이용촉진 및 정보보호 등에<br>
+                              관한 법률<br>
+                              보존 기간 : 6개월<br><br>
+                                                    
+                            - 방문에 관한 기록<br>
+                              보존 이유 : 통신비밀보호법<br>
+                              보존 기간 : 3개월<br>
+                        </p>
+                    </dd>
+                </dl>
+            </section>
+
+            <section class="select_category">
+                <div class="category_wrap">
+                    <div class="category_title">
+                        제품 선택
+                    </div>
+                    <div class="category_contents"></div>
+                </div>
+
+                <div class="category_wrap">
+                    <div class="category_title">
+                        대리점/서비스센터
+                    </div>
+                    <div class="category_contents map-container" style="border-bottom: 1px solid rgb(196, 196, 196);">
+                        <div id="map"></div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="counsel-submit_button">
+                <button type="button" id="members" value="회원으로 신청">회원으로 신청</button>
+                <button type="button" id="non-members" value="비회원으로 신청">비회원으로 신청</button>
             </div>
 
         </div>
-
-        <div class="img_box">
-            <img src="https://interiorteacher.com/_next/image?url=https%3A%2F%2Fstatic.interiorteacher.com%2Fmall%2Fgeneral%2Flogin-background-img.jpg&w=1080&q=80" alt="">
-        </div>
-
     </section>
 
     <!-- 푸터 메뉴 -->
@@ -188,7 +322,41 @@
         </svg>
     </a>
 
+    <!-- 비회원 조회 모달창 -->
+    <div class="modal">
+
+        <div class="modal_box">
+            <i class="fa-solid fa-xmark" id="remove-modal"></i>
+            <h2 class="modal_title">비회원 신청 조회</h2>
+
+            <!-- 사용자 정보 입력 폼 -->
+            <form action="" method="post">
+                <div class="input_user-info">
+                    <span>성명 :</span>
+                    <input type="text" name="name" placeholder="성명">
+                </div>
+
+                <div class="input_user-info">
+                    <span>전화 번호 :</span>
+                    <input type="text" name="phone" placeholder="전화 번호 (01012345678)">
+                </div>
+
+                <ul>
+                    <li><p>- 구매 상담 신청 시 인증 받은 성명과 휴대폰 번호를 입력하시면 구매 상담 신청 내역을 확인하실 수 있습니다.</p></li>
+                    <li><p>- 회원이신 경우 마이페이지 > 구매 상담 신청 내역에서 확인 가능합니다.</p></li>
+                </ul>
+
+                <div class="app-submit">
+                    <button type="button" id="cancel">취소</button>
+                    <input type="submit" value="다음">
+                </div>
+            </form>
+        </div>
+
+    </div>
+
     <script src="counsel.js"></script>
+    <script src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=YOUR_CLIENT_ID"></script> 
 
 </body>
 </html>

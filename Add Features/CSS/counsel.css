@@ -1,0 +1,362 @@
+.main {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+.button_menu > a:nth-of-type(1)::before {
+    right: -1px;
+}
+
+/* 구매상담 신청 영역 */
+.main {
+    width: 100%;
+    /* min-height: 100vh; */
+    background-color: white;
+    display: flex;
+    justify-content: center;
+}
+
+.consult_container {
+    width: 1903px;
+    padding: 0 80px;
+}
+
+.consult_title {
+    margin-top: 70px;
+    width: 100%;
+    height: 200px;
+    text-align: center;
+}
+
+.consult_title h1 {
+    font-size: 30px;
+}
+
+.consult_title p {
+    margin-top: 25px;
+    font-size: 14px;
+    font-weight: 200;
+}
+
+.consult_title h2 {
+    margin-top: 25px;
+    font-size: 25px;
+    font-weight: bold;
+    color: #0072BB;
+}
+
+.user-counsel {
+    width: 100%;
+    margin-top: 70px;
+}
+
+dl {
+    margin: 20px 0;
+}
+
+dt {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+dd {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+}
+
+input[name="way"] {
+    width: 25px;
+    height: 25px;
+    margin-left: 15px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+input[name="way"]:nth-of-type(1) {
+    margin-left: 0;
+}
+
+input[type="text"] {
+    width: 100%;
+    font-size: 16px;
+    padding: 10px 15px;
+    border: 1px solid rgb(196, 196, 196);
+    border-radius: 8px;
+}
+
+#request {
+    min-width: 400px;
+    width: 100%;
+    min-height: 200px;
+    max-height: 200px;
+    border: 1px solid rgb(196, 196, 196);
+    border-radius: 8px;
+    padding: 15px 10px;
+    font-size: 16px;
+}
+
+.request-comment {
+    font-size: 14px;
+    font-weight: 200;
+    color: gray;
+}
+
+.personal-dd {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.personal-dd p {
+    display: flex;
+    align-items: center;
+}
+
+#agree {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.rule-info {
+    width: 100%;
+    padding: 20px;
+    background-color: #f6f3f2;
+    overflow: hidden;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    height: 250px;
+}
+
+.select_category {
+    margin-top: 35px;
+    width: 100%;
+    border-top: 1px solid rgb(196, 196, 196);
+}
+
+.category_title {
+    border-top: 1px solid rgb(196, 196, 196);
+    width: 100%;
+    height: 80px;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.category_contents {
+    width: 100%;
+    transition: 0.3s ease-out;
+    overflow: hidden;
+    height: 0;
+}
+
+#map {
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+    background-color: gray;
+}
+
+.show-contents {
+    height: 600px;
+}
+
+.counsel-submit_button {
+    margin-top: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.counsel-submit_button button {
+    margin: 0 15px;
+    width: 200px;
+    height: 50px;
+    border: none;
+    background-color: #0072BB;
+    color: #eee;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* 푸터 영역 */
+footer {
+    margin-top: 70px;
+}
+
+/* 비회원 조회 모달창 */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+    overflow: hidden;
+    display: none;
+    padding: 20px;
+}
+
+.show-modal {
+    display: block;
+}
+
+.modal_box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 560px;
+    max-height: 560px;
+    background-color: white;
+    overflow: hidden;
+    padding: 30px;
+}
+
+.modal_box i {
+    display: block;
+    text-align: right;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.modal_title {
+    text-align: center;
+    font-size: 25px;
+    font-weight: 200;
+}
+
+form {
+    margin-top: 40px;
+    width: 100%;
+}
+
+.input_user-info {
+    width: 100%;
+    height: 50px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.input_user-info span {
+    font-size: 18px;
+    font-weight: 200;
+}
+
+.input_user-info input {
+    width: 350px;
+    padding: 10px 15px;
+    border: 1px solid rgb(196, 196, 196);
+    border-radius: 8px;
+}
+
+form ul {
+    margin-top: 40px;
+}
+
+form li {
+    margin: 15px 0;
+}
+
+form li > p {
+    font-size: 14px;
+    font-weight: 200;
+    color: rgb(80, 80, 80);
+}
+
+.app-submit {
+    margin-top: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.app-submit button,
+.app-submit input {
+    width: 150px;
+    height: 40px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    color: #eee;
+    margin: 0 10px;
+}
+
+.app-submit button {
+    background-color: gray;
+}
+
+.app-submit input {
+    background-color: #0072BB;
+}
+
+@media screen and (max-width: 1000px) {
+    .input_user-info {
+        justify-content: center;
+    }
+
+    .input_user-info span {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .consult_title h1 {
+        font-size: 25px;
+    }
+
+    .consult_title p {
+        font-size: 12px;
+    }
+
+    .consult_title h2 {
+        font-size: 20px;
+    }
+
+    .input_user-info input {
+        width: 250px;
+    }
+
+    .user-counsel input {
+        font-size: 14px;
+    }
+
+    #request {
+        min-width: 340px;
+    }
+
+    #remove-modal {
+        font-size: 25px;
+    }
+
+    .modal_title {
+        font-size: 20px;
+    }
+
+    form p {
+        font-size: 12px;
+    }
+
+    .app-submit button,
+    .app-submit input {
+        width: 110px;
+    }
+
+    .counsel-submit_button button {
+        width: 130px;
+        margin: 0 10px;
+        font-size: 14px;
+    }
+}

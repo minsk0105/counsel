@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>구매상담 신청 폼</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="CSS/style.css">
     <link rel="icon" type="image/png" sizes="32x32" href="https://static.interiorteacher.com/general/favicon_white_32.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
@@ -45,7 +45,7 @@
                     <a href="#">구매 컨설팅</a>
                     <ul class="nav_submenu">
                         <li><a href="#">나만의 가구 만들기</a></li>
-                        <li><a href="#">구매상담 신청하기</a></li>
+                        <li><a href="consult.php">구매상담 신청하기</a></li>
                         <li><a href="#">컨설팅 사례</a></li>
                     </ul>
                 </li>
@@ -88,7 +88,7 @@
                     인테리어의 완성.
                 </h1>
                 <div class="button_menu">
-                    <a href="#">구매상담 신청하기</a>
+                    <a href="consult.php">구매상담 신청하기</a>
                     <a href="#">가구 둘러보기</a>
                 </div>
             </div>
