@@ -145,3 +145,22 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
+/* 회원/비회원 상담 신청 */
+const members = document.getElementById('members');
+const nonMembers = document.getElementById('non-members');
+const nonMembersModal = document.querySelector('.non-members-order_modal');
+const nonMembersCancel = document.getElementById('non-members-cancel');
+const nonMembersXmark = document.getElementById('remove-non-members');
+
+nonMembers.addEventListener('click', function() {
+    nonMembersModal.classList.add("show-modal");
+});
+
+nonMembersCancel.addEventListener('click', function() {
+    nonMembersModal.classList.remove("show-modal");
+});
+
+nonMembersXmark.addEventListener('click', function() {
+    nonMembersModal.classList.remove("show-modal");
+});
