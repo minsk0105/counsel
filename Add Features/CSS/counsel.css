@@ -1,9 +1,9 @@
-.main {
+/* .main {
     width: 100%;
     overflow: hidden;
     display: flex;
     justify-content: center;
-}
+} */
 
 .button_menu > a:nth-of-type(1)::before {
     right: -1px;
@@ -16,10 +16,11 @@
     background-color: white;
     display: flex;
     justify-content: center;
+    overflow: hidden;
 }
 
 .consult_container {
-    width: 1903px;
+    max-width: 1903px;
     padding: 0 80px;
 }
 
@@ -198,6 +199,7 @@ input[type="text"] {
     z-index: 2;
     overflow: hidden;
     display: none;
+    padding: 20px;
 }
 
 .non-members-order_modal-box p {
@@ -376,12 +378,16 @@ footer {
     }
 
     .app-submit button,
-    .app-submit input {
-        width: 110px;
+    .app-submit input,
+    .non-members_submit button,
+    .non-members_submit input {
+        width: 120px;
     }
 
-    .counsel-submit_button button {
-        width: 130px;
+    .counsel-submit_button button,
+    .non-members_submit button,
+    .non-members_submit input {
+        width: 120px;
         margin: 0 10px;
         font-size: 14px;
     }

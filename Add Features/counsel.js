@@ -164,3 +164,74 @@ nonMembersCancel.addEventListener('click', function() {
 nonMembersXmark.addEventListener('click', function() {
     nonMembersModal.classList.remove("show-modal");
 });
+
+// 필수 사항 입력 여부 확인
+const inputName = document.getElementById('name');
+const inputPhone = document.getElementById('phone');
+const inputEmail = document.getElementById('email');
+const inputDate = document.getElementById('date');
+const textRequest = document.getElementById('request');
+const submitBtn = document.getElementById('insert_button');
+
+submitBtn.addEventListener('click', function(event) {
+    if (inputName.value === "" || inputPhone.value === "" ||
+        inputEmail.value === "" || inputDate.value === "" ||
+        textRequest.value === "") {
+
+            if (inputName.value === "" && inputPhone.value !== "" &&
+                inputEmail.value !== "" && inputDate.value !== "" &&
+                textRequest.value !== "") {
+                    alert("성명을 입력해 주세요.");
+                    inputName.focus();
+                } else if (inputName.value !== "" && inputPhone.value === "" &&
+                    inputEmail.value !== "" && inputDate.value !== "" &&
+                    textRequest.value !== "") {
+                        alert("전화번호를 입력해 주세요.");
+                        inputPhone.focus();
+                    } else if (inputName.value !== "" && inputPhone.value !== "" &&
+                        inputEmail.value === "" && inputDate.value !== "" &&
+                        textRequest.value !== "") {
+                            alert("이메일을 입력해 주세요.");
+                            inputEmail.focus();
+                        } else if (inputName.value !== "" && inputPhone.value !== "" &&
+                            inputEmail.value !== "" && inputDate.value === "" &&
+                            textRequest.value !== "") {
+                                alert("예약일자를 입력해 주세요.");
+                                inputDate.focus();
+                            } else if (inputName.value !== "" && inputPhone.value !== "" &&
+                                inputEmail.value !== "" && inputDate.value !== "" &&
+                                textRequest.value === "") {
+                                    alert("문의하실 내용을 입력해 주세요.");
+                                    textRequest.focus();
+                                } else {
+                                    alert("필수 정보를 입력해 주세요.");
+                                    location.href = "#main";
+                                }
+            nonMembersModal.classList.remove("show-modal");
+            event.preventDefault();
+            return false;
+        }
+});
+
+const viewName = document.getElementById('view-name');
+const viewPhone = document.getElementById('view-phone');
+const viewSubmitBtn = document.getElementById('view-submit');
+
+viewSubmitBtn.addEventListener('click', function(event) {
+
+    if (viewName.value === '' || viewPhone.value === '') {
+        if (viewName.value === '' && viewPhone.value !== '') {
+            alert("성명을 입력해 주세요.");
+            viewName.focus();
+        } else if (viewName.value !== '' && viewPhone.value === '') {
+            alert("전화 번호를 입력해 주세요.");
+            viewPhone.focus();
+        } else {
+            alert("신청 내역을 조회할 정보를 입력해 주세요.");
+        }
+
+        event.preventDefault();
+        return false;
+    }
+
+});
