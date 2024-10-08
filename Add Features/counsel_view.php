@@ -2,6 +2,43 @@
     $connect = mysqli_connect('localhost', 'root', '', 'consult_form');
 
     $name = $_POST['name'];
+    $phone = $_POST['phone'];
+
+    $read_sql = "
+        SELECT * FROM consult WHERE name = '{$name}' AND phone = '{$phone}'
+    ";
+
+    $result = mysqli_query($connect, $read_sql);
+
+    $list = '';
+    $isset_row = mysqli_fetch_array($result);
+
+    if (!$isset_row) { ?>
+        <script>
+            alert("해당 정보가 존재하지 않습니다. 다시 확인해 주세요.");
+            location.href = 'consult.php';
+        </script>
+    <?php } else {
+        $list .= "
+            <tr>
+                <td>{$isset_row['date']}</td>
+                <td>{$isset_row['email']}</td>
+                <td>{$isset_row['description']}</td>
+                <td>{$isset_row['method']}</td>
+            </tr>
+        ";
+    }
+
+    while ($row = mysqli_fetch_array($result)) {
+        $list .= "
+            <tr>
+                <td>{$row['date']}</td>
+                <td>{$row['email']}</td>
+                <td>{$row['description']}</td>
+                <td>{$row['method']}</td>
+            </tr>
+        ";
+    }
 ?>
 <!DOCTYPE html>
 <html lang="ko">
@@ -11,6 +48,7 @@
     <title>구매상담 신청 폼</title>
     <link rel="stylesheet" href="CSS/style.css">
     <link rel="stylesheet" href="CSS/counsel.css">
+    <link rel="stylesheet" href="CSS/view.css">
     <link rel="icon" type="image/png" sizes="32x32" href="https://static.interiorteacher.com/general/favicon_white_32.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
@@ -32,6 +70,10 @@
             .consult_container {
                 padding: 0 20px;
             }
+        }
+
+        .push_color td {
+            background-color: rgb(220, 220, 220);
         }
     </style>
 </head>
@@ -106,6 +148,7 @@
     <!-- 로그인 메인 화면 -->
     <section class="main" id="main" style="padding-top: 70px;">
         <div class="consult_container">
+
             <section class="consult_title">
                 <h1><?=$name?>님의 신청 내역</h1>
                 <p>
@@ -114,6 +157,28 @@
                 </p>
                 <h2>1010-8080</h2>
             </section>
+
+            <section id="view_list">
+                <table class="wrap-table">
+                    <thead>
+                        <tr>
+                            <th>예약일자</th>
+                            <th>이메일</th>
+                            <th>문의내용</th>
+                            <th>상담여부</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <?=$list?>
+                    </tbody>
+                </table>
+            </section>
+            
+            <div class="counsel-submit_button">
+                    <a href="consult.php">이전으로</a>
+                </div>
+
         </div>
     </section>
 
@@ -175,40 +240,8 @@
         </svg>
     </a>
 
-    <!-- 비회원 조회 모달창 -->
-    <div class="modal">
-
-        <div class="modal_box">
-            <i class="fa-solid fa-xmark" id="remove-modal"></i>
-            <h2 class="modal_title">비회원 신청 조회</h2>
-
-            <!-- 사용자 정보 입력 폼 -->
-            <form action="" method="post" id="list_view">
-                <div class="input_user-info">
-                    <span>성명 :</span>
-                    <input type="text" name="name" placeholder="성명">
-                </div>
-
-                <div class="input_user-info">
-                    <span>전화 번호 :</span>
-                    <input type="text" name="phone" placeholder="전화 번호 (01012345678)">
-                </div>
-
-                <ul>
-                    <li><p>- 구매 상담 신청 시 인증 받은 성명과 휴대폰 번호를 입력하시면 구매 상담 신청 내역을 확인하실 수 있습니다.</p></li>
-                    <li><p>- 회원이신 경우 마이페이지 > 구매 상담 신청 내역에서 확인 가능합니다.</p></li>
-                </ul>
-
-                <div class="app-submit">
-                    <button type="button" id="cancel">취소</button>
-                    <input type="submit" value="다음">
-                </div>
-            </form>
-        </div>
-
-    </div>
-
-    <script src="counsel.js"></script>
+    <script src="Script/counsel.js"></script>
+    <script src="Script/view_list.js"></script>
     <script src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=YOUR_CLIENT_ID"></script> 
 
 </body>

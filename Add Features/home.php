@@ -326,6 +326,6 @@
         </svg>
     </a>
 
-    <script src="counsel.js"></script>
+    <script src="Script/counsel.js"></script>
 </body>
 </html>

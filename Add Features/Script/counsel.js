@@ -207,10 +207,12 @@ submitBtn.addEventListener('click', function(event) {
                                     alert("필수 정보를 입력해 주세요.");
                                     location.href = "#main";
                                 }
-            nonMembersModal.classList.remove("show-modal");
-            event.preventDefault();
-            return false;
-        }
+                                
+                                nonMembersModal.classList.remove("show-modal");
+                                event.preventDefault();
+                                return false;
+                            }
+                            checking(event);
 });
 
 const viewName = document.getElementById('view-name');
@@ -235,3 +237,20 @@ viewSubmitBtn.addEventListener('click', function(event) {
     }
 
 });
+
+// 개인정보처리방침 동의 여부 확인
+const agreeCheck = document.getElementById('agree');
+let checked;
+
+agreeCheck.addEventListener('change', function() {
+    checked = agreeCheck.checked;
+});
+
+function checking(check) {
+    if (!checked) {
+        alert("이용약관 동의란에 체크해 주세요.");
+        nonMembersModal.classList.remove("show-modal");
+        check.preventDefault();
+        return false;
+    }
+}
