@@ -8,6 +8,55 @@
     <link rel="stylesheet" href="CSS/user.css">
     <link rel="icon" type="image/png" sizes="32x32" href="https://static.interiorteacher.com/general/favicon_white_32.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .sign_container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            padding: 130px 20px 0 20px;
+        }
+
+        .register_form {
+            width: 400px;
+            overflow: hidden;
+        }
+
+        .register_form h2 {
+            text-align: center;
+        }
+
+        #sign_form label {
+            margin-top: 15px;
+            font-size: 14px;
+            color: rgb(30, 30, 30);
+        }
+
+        #sign_form input {
+            margin-top: 8px;
+            border: 1px solid rgb(196, 196, 196);
+            font-size: 16px;
+            padding: 10px 15px;
+            border-radius: 8px;
+            height: 55px;
+        }
+
+        #sign_form input::placeholder {
+            font-size: 14px;
+        }
+
+        .push_register {
+            margin-top: 30px;
+            width: 100%;
+            height: 55px;
+            padding: 10px 15px;
+            border: none;
+            background-color: #1e1e1e;
+            color: #eee;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
 
@@ -77,57 +126,38 @@
         </div>
     </header>
 
-    <!-- 로그인 메인 화면 -->
-    <section class="main">
-        
-        <div class="input_form">
+    <!-- 회원가입 메인 화면 -->
+    <section class="main sign_container">
+        <div class="register_form">
+            <h2>회원가입</h2>
 
-            <div class="user_box">
-                <a href="#" class="kakao_login">
-                    <svg width="24" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M12.4951 3C6.97953 3 2.5 6.53572 2.5 10.8844C2.5 13.5876 4.21682 15.9676 6.84139 17.3878L6.12111 21.2369C6.08165 21.4328 6.29872 21.5699 6.46645 21.4622L10.7585 18.6512C10.7585 18.6512 11.9031 18.7687 12.5049 18.7687C18.0205 18.7687 22.5 15.233 22.5 10.8844C22.4901 6.53572 18.0205 3 12.4951 3Z" fill="#3C1E1E"></path>
-                        <path d="M8.41778 8.60352H5.5522C5.28724 8.60352 5.06152 8.81942 5.06152 9.0942C5.06152 9.36898 5.27742 9.58488 5.5522 9.58488H6.4845V13.0393C6.4845 13.1669 6.53357 13.2846 6.62189 13.3729C6.71021 13.4613 6.82798 13.5103 6.95555 13.5103H7.0635C7.19108 13.5103 7.30884 13.4613 7.39717 13.3729C7.48549 13.2846 7.53456 13.157 7.53456 13.0295V9.57506H8.41778C8.68275 9.57506 8.90846 9.35916 8.90846 9.08438C8.90846 8.81942 8.69256 8.60352 8.41778 8.60352Z" fill="#F9E000"></path>
-                        <path d="M15.1201 12.598H13.7855V9.06509C13.7855 8.77068 13.5499 8.53516 13.2555 8.53516C12.9611 8.53516 12.7256 8.77068 12.7256 9.06509V12.8728C12.7256 12.9022 12.7256 13.0102 12.7256 13.0396C12.7256 13.2849 12.9219 13.4812 13.1672 13.4812H15.1201C15.3654 13.4812 15.5617 13.2849 15.5617 13.0396C15.5617 12.7943 15.3654 12.598 15.1201 12.598Z" fill="#F9E000"></path>
-                        <path d="M19.3995 12.7648L17.9176 10.8021L19.2621 9.44777C19.4486 9.26132 19.4486 8.96691 19.2621 8.78045C19.0757 8.59399 18.7812 8.59399 18.6046 8.78045L16.9461 10.4586V9.07486C16.9461 8.78045 16.7106 8.54492 16.4162 8.54492C16.1218 8.54492 15.8862 8.78045 15.8862 9.07486V13.0003C15.8862 13.2947 16.1218 13.5302 16.4162 13.5302C16.7106 13.5302 16.9461 13.2947 16.9461 13.0003V11.7834L17.2503 11.4792L18.6537 13.334C18.8107 13.5401 19.1051 13.5891 19.3112 13.4321C19.5173 13.2653 19.5565 12.9709 19.3995 12.7648Z" fill="#F9E000"></path>
-                        <path d="M12.4216 12.8924L10.9889 8.95709C10.9005 8.72157 10.6356 8.54492 10.3215 8.54492C10.243 8.54492 10.1645 8.55474 10.0958 8.57436C10.0271 8.59399 9.95842 8.62343 9.89954 8.66269C9.84066 8.70194 9.79159 8.75101 9.74252 8.80008C9.71308 8.83933 9.69345 8.87859 9.67383 8.91784C9.6542 8.95709 9.5855 9.15337 9.56588 9.22206C9.55606 9.24169 9.54625 9.26132 9.54625 9.29076C9.53643 9.3202 9.52662 9.33983 9.51681 9.36927C9.50699 9.39871 9.49718 9.42815 9.48737 9.45759C9.47755 9.48703 9.45793 9.52628 9.44811 9.55573C9.4383 9.59498 9.41867 9.63423 9.40886 9.66367C9.38923 9.70293 9.37942 9.74218 9.35979 9.78144C9.34016 9.82069 9.33035 9.86976 9.31072 9.90902C9.29109 9.95808 9.28128 9.99734 9.26165 10.0464C9.24203 10.0955 9.2224 10.1445 9.21259 10.1838C9.19296 10.2329 9.17333 10.2819 9.1537 10.331C9.13408 10.3801 9.11445 10.4291 9.09482 10.4782C9.07519 10.5273 9.05557 10.5763 9.03594 10.6352C9.01631 10.6843 8.99669 10.7432 8.97706 10.7922C8.95743 10.8413 8.9378 10.9002 8.91818 10.9493C8.89855 10.9983 8.87892 11.0572 8.85929 11.1063C8.83967 11.1553 8.82004 11.2142 8.80041 11.2633C8.78079 11.3124 8.76116 11.3712 8.74153 11.4203C8.7219 11.4694 8.70228 11.5184 8.68265 11.5773C8.66302 11.6264 8.6434 11.6755 8.62377 11.7245C8.60414 11.7736 8.58451 11.8227 8.5747 11.8717C8.55507 11.9208 8.54526 11.9601 8.52563 12.0091C8.50601 12.0484 8.49619 12.0975 8.47656 12.1367C8.45694 12.176 8.44712 12.2152 8.4275 12.2643C8.41768 12.3035 8.39806 12.3428 8.38824 12.382C8.37843 12.4213 8.3588 12.4507 8.34899 12.49C8.33917 12.5194 8.32936 12.5587 8.30973 12.5881C8.29992 12.6176 8.29011 12.647 8.28029 12.6765C8.27048 12.6961 8.26066 12.7255 8.25085 12.7452C8.24104 12.7648 8.23122 12.7844 8.23122 12.804C8.22141 12.8237 8.22141 12.8335 8.2116 12.8531C8.2116 12.8629 8.20178 12.8727 8.20178 12.8825C8.20178 12.8924 8.20178 12.8924 8.19197 12.9022C8.10365 13.1475 8.23122 13.4223 8.48638 13.5106C8.73172 13.5989 9.0065 13.4714 9.09482 13.2162L9.34016 12.5194H11.2931L11.5384 13.2162C11.6267 13.4615 11.8917 13.5989 12.1469 13.5106C12.3726 13.4125 12.5001 13.1377 12.4216 12.8924ZM9.63457 11.6166L10.2921 9.73237C10.3019 9.73237 10.3019 9.73237 10.3117 9.73237L10.9692 11.6166H9.63457Z" fill="#F9E000"></path>
-                    </svg>
-                    <span>카카오로 계속하기</span>
-                </a>
-                <a href="#" class="naver_login">
-                    <svg width="24" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M15.3441 12.4958L9.41585 4H4.5V19.8643H9.6559V11.3686L15.5841 19.8643H20.5V4H15.3441V12.4958Z" fill="white"></path>
-                    </svg>
-                    <span>네이버로 계속하기</span>
-                </a>
-                <div class="user_line"></div>
-                <p class="user_title">아이디/비밀번호 로그인 하기</p>
+            <form action="" method="post" name="register_form" id="sign_form">
+            
+                <label><span style="color: #0072BB;">*</span> 이름</label>
+                <input type="text" name="name" placeholder="실명을 입력해 주세요.">
 
-                <form action="" method="post">
-                    <div class="id-box">
-                        <label>아이디</label>
-                        <input type="text" name="id" placeholder="아이디를 입력해 주세요.">
-                    </div>
-                    <div class="password-box">
-                        <label>비밀번호</label>
-                        <input type="password" name="password" placeholder="비밀번호를 입력해 주세요.">
-                    </div>
-                    <input type="submit" value="로그인" class="submit">
-                </form>
-                <div class="other_button">
-                    <p class="find_user-info">
-                        <a href="#">아이디 찾기</a>
-                        <a href="#">비밀번호 찾기</a>
-                    </p>
-                    <a href="sign_up.php">회원가입</a>
-                </div>
-            </div>
+                <label><span style="color: #0072BB;">*</span> 핸드폰 번호</label>
+                <input type="text" name="phone" placeholder="-를 빼고 입력해 주세요.">
 
+                <label><span style="color: #0072BB;">*</span> 이메일</label>
+                <input type="text" name="email" placeholder="이메일을 입력해 주세요.">
+
+                <label><span style="color: #0072BB;">*</span> 아이디</label>
+                <input type="text" name="user_id" placeholder="4자리 이상의 영문 + 숫자">
+
+                <label><span style="color: #0072BB;">*</span> 비밀번호</label>
+                <input type="password" name="pass" placeholder="6-20자 사이의 숫자 + 영문">
+
+                <label><span style="color: #0072BB;">*</span> 비밀번호 확인</label>
+                <input type="password" name="pass_check" placeholder="비밀번호를 다시 입력해 주세요.">
+
+                <label><span style="color: #0072BB;">*</span> 배송지</label>
+                <input type="text" name="user_address" placeholder="주소를 입력해 주세요. (충선로-105 2012동 1203호)">
+
+                <button type="submit" class="push_register">회원가입</button>
+
+            </form>
         </div>
-
-        <div class="img_box">
-            <img src="https://interiorteacher.com/_next/image?url=https%3A%2F%2Fstatic.interiorteacher.com%2Fmall%2Fgeneral%2Flogin-background-img.jpg&w=1080&q=80" alt="">
-        </div>
-
     </section>
 
     <!-- 푸터 메뉴 -->
