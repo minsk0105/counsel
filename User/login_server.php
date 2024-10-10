@@ -1,6 +1,7 @@
 <?php
 
     include('conn.php');
+    session_start();
     
     if (
         isset($_POST['user_id']) &&
@@ -36,7 +37,13 @@
                 $hash = $row['password'];
 
                 if (password_verify($pass, $hash)) { // 패스워드의 해시와 입력한 패스워드가 같은지 확인
-                    header("location: login_view.php");
+
+                    // 전역변수를 이용
+                    $_SESSION['mb_id'] = $row['mb_id'];
+                    $_SESSION['mb_nick'] = $row['mb_nick'];
+                    $_SESSION['no'] = $row['no'];
+
+                    header("location: Mypage/mypage.php");
                     exit();
                 } else {
                     header("location: login_view.php?=로그인에 실패하였습니다.");

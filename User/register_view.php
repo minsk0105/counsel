@@ -22,10 +22,20 @@
             <?php } ?>
 
             <label>아이디</label>
-            <input type="text" placeholder="아이디" name="user_id">
+            
+            <?php if (isset($_GET['user_id'])) { ?>
+                <input type="text" placeholder="아이디" name="user_id" value="<?=$_GET['user_id']?>">
+            <?php } else { ?>
+                <input type="text" placeholder="아이디" name="user_id">
+            <?php } ?>
 
             <label>닉네임</label>
-            <input type="text" placeholder="닉네임" name="user_nick">
+
+            <?php if (isset($_GET['user_nick'])) { ?>
+                <input type="text" placeholder="닉네임" name="user_nick" value="<?=$_GET['user_nick']?>">
+            <?php } else { ?>
+                <input type="text" placeholder="닉네임" name="user_nick">
+            <?php } ?>
 
             <label>비밀번호</label>
             <input type="password" placeholder="비밀번호" name="pass">
