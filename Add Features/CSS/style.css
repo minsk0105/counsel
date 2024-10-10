@@ -643,6 +643,11 @@ footer {
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 2;
     overflow: hidden;
+    display: none;
+}
+
+.show-wrap {
+    display: block;
 }
 
 .side_bar {
@@ -654,6 +659,12 @@ footer {
     background-color: white;
     overflow: hidden;
     padding: 0 80px;
+    transition: 0.4s ease-out;
+    transform: translateX(100%);
+}
+
+.show-bar {
+    transform: translateX(0);
 }
 
 .close_sidebar {
@@ -676,7 +687,8 @@ footer {
     border-bottom: 1px solid rgb(196, 196, 196);
 }
 
-.submenu_title ul {
+.submenu_title ul,
+.mypage ul {
     margin-top: 15px;
 }
 
@@ -688,7 +700,8 @@ footer {
     transition: 0.3s;
 }
 
-.submenu_title a:hover {
+.submenu_title a:hover,
+.mypage a:hover {
     color: #0072BB;
 }
 
@@ -697,6 +710,39 @@ footer {
     font-size: 12px;
     font-weight: 200;
     color: gray;
+}
+
+.mypage li {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mypage a {
+    display: inline-block;
+    width: 50%;
+    font-size: 14px;
+    font-weight: 200;
+    cursor: pointer;
+    height: 35px;
+    line-height: 35px;
+}
+
+.side_login {
+    margin-top: 15px;
+    width: 100%;
+}
+
+.side_login a {
+    font-size: 12px;
+    font-weight: 200;
+    color: gray;
+    cursor: pointer;
+}
+
+.side_login a:hover {
+    color: #0072BB;
 }
 
 /* 푸터 반응형 */

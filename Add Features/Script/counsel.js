@@ -183,35 +183,35 @@ submitBtn.addEventListener('click', function(event) {
                 textRequest.value !== "") {
                     alert("성명을 입력해 주세요.");
                     inputName.focus();
-                    return false;
+                    // return false;
                 } else if (inputName.value !== "" && inputPhone.value === "" &&
                     inputEmail.value !== "" && inputDate.value !== "" &&
                     textRequest.value !== "") {
                         alert("전화번호를 입력해 주세요.");
                         inputPhone.focus();
-                        return false;
+                        // return false;
                     } else if (inputName.value !== "" && inputPhone.value !== "" &&
                         inputEmail.value === "" && inputDate.value !== "" &&
                         textRequest.value !== "") {
                             alert("이메일을 입력해 주세요.");
                             inputEmail.focus();
-                            return false;
+                            // return false;
                         } else if (inputName.value !== "" && inputPhone.value !== "" &&
                             inputEmail.value !== "" && inputDate.value === "" &&
                             textRequest.value !== "") {
                                 alert("예약일자를 입력해 주세요.");
                                 inputDate.focus();
-                                return false;
+                                // return false;
                             } else if (inputName.value !== "" && inputPhone.value !== "" &&
                                 inputEmail.value !== "" && inputDate.value !== "" &&
                                 textRequest.value === "") {
                                     alert("문의하실 내용을 입력해 주세요.");
                                     textRequest.focus();
-                                    return false;
+                                    // return false;
                                 } else {
                                     alert("필수 정보를 입력해 주세요.");
                                     location.href = "#main";
-                                    return false;
+                                    // return false;
                                 }
                                 
         nonMembersModal.classList.remove("show-modal");
@@ -260,3 +260,12 @@ function checking(check) {
         return false;
     }
 }
+
+/* 사이드바 */
+const barBtn = document.getElementById('bar');
+const sideWrap = document.querySelector('.side_wrap');
+const sideBar = document.querySelector('.side_bar');
+
+window.addEventListener('DOMContentLoaded', function() {
+    console.log(barBtn);
+});
