@@ -34,8 +34,8 @@
             <input type="password" placeholder="비밀번호 확인" name="pass_check">
 
             <div class="button_menu">
-                <a href="">이미 회원이신가요? (로그인 페이지)</a>
-                <button type="submit">저장</button>
+                <a href="login_view.php">이미 회원이신가요? (로그인 페이지)</a>
+                <button type="submit" name="save">저장</button>
             </div>
         </form>
     </div>

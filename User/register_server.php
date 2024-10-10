@@ -57,7 +57,7 @@
             ";
             $order = mysqli_query($conn, $sql_same);
 
-            if (mysqli_num_rows($order) > 0) {
+            if (mysqli_num_rows($order) > 0) { // 아이디 및 닉네임 중복확인
                 header("location: register_view.php?error=아이디 또는 닉네임이 중복되었습니다.");
                 exit();
             } else {

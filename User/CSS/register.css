@@ -25,7 +25,7 @@ body {
 
 .user_box {
     width: 500px;
-    min-height: 500px;
+    min-height: 300px;
     overflow: hidden;
     border: 1px solid gray;
     padding: 20px;
