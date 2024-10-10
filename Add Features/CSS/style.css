@@ -633,6 +633,72 @@ footer {
     cursor: pointer;
 }
 
+/* 사이드바 */
+.side_wrap {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+    overflow: hidden;
+}
+
+.side_bar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 35vw;
+    height: 100vh;
+    background-color: white;
+    overflow: hidden;
+    padding: 0 80px;
+}
+
+.close_sidebar {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+.close_sidebar i {
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.sidebar_contents,
+.submenu_title {
+    padding: 15px 0;
+    width: 100%;
+    border-bottom: 1px solid rgb(196, 196, 196);
+}
+
+.submenu_title ul {
+    margin-top: 15px;
+}
+
+.submenu_title a {
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.submenu_title a:hover {
+    color: #0072BB;
+}
+
+.sidebar_contents > p,
+.submenu_title > p {
+    font-size: 12px;
+    font-weight: 200;
+    color: gray;
+}
+
 /* 푸터 반응형 */
 @media screen and (max-width: 1225px) {
     .footer-top {

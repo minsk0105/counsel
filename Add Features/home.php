@@ -326,6 +326,30 @@
         </svg>
     </a>
 
+    <!-- 사이드바 메뉴 -->
+    <section class="side_wrap">
+    
+        <div class="side_bar">
+            <div class="close_sidebar">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+
+            <div class="submenu_title sidebar_contents">
+                <p>살펴보기</p>
+                <ul>
+                    <li><a href="">나만의 가구 만들기</a></li>
+                    <li><a href="">구매상담 신청하기</a></li>
+                    <li><a href="">컨설팅 사례</a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar_contents">
+                <p>마이페이지</p>
+            </div>
+        </div>
+
+    </section>
+
     <script src="Script/counsel.js"></script>
 </body>
 </html>
