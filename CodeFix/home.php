@@ -4,15 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>구매상담 신청 폼</title>
-    <link rel="stylesheet" href="CSS/style.css">
+    <!-- 파비콘(favicon) -->
     <link rel="icon" type="image/png" sizes="32x32" href="https://static.interiorteacher.com/general/favicon_white_32.png">
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- 스타일시트 -->
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/visual.css">
+    <link rel="stylesheet" href="CSS/home.css">
 </head>
 <body>
     
-    <!-- 헤더 메뉴 -->
+    <!-- 헤더 영역 -->
     <header id="header">
-        <div class="header-left_menu">
+        
+        <div class="header-left">
+            <!-- 로고 -->
             <div class="logo">
                 <a href="home.php">
                     <svg width="8.5em" height="1em" viewBox="0 0 136 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -38,6 +45,7 @@
                 </a>
             </div>
 
+            <!-- 네비게이션 -->
             <ul class="nav_menu">
                 <li><a href="#">서비스 소개</a></li>
                 <li><a href="#">가구 쇼핑</a></li>
@@ -45,14 +53,15 @@
                     <a href="#">구매 컨설팅</a>
                     <ul class="nav_submenu">
                         <li><a href="#">나만의 가구 만들기</a></li>
-                        <li><a href="consult.php">구매상담 신청하기</a></li>
+                        <li><a href="#">구매상담 신청하기</a></li>
                         <li><a href="#">컨설팅 사례</a></li>
                     </ul>
                 </li>
             </ul>
         </div>
 
-        <div class="header-right_menu">
+        <!-- 헤더 아이콘 -->
+        <div class="header-right">
             <svg width="1em" height="1em" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M16.2803 15.5035L22.0001 21.2234L21.2234 22.0001L15.5035 16.2803L16.2803 15.5035Z" fill="currentColor"></path>
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M10.3759 3.09847C6.35667 3.09847 3.09847 6.35667 3.09847 10.3759C3.09847 14.395 6.35667 17.6532 10.3759 17.6532C14.395 17.6532 17.6532 14.395 17.6532 10.3759C17.6532 6.35667 14.395 3.09847 10.3759 3.09847ZM2 10.3759C2 5.75 5.75 2 10.3759 2C15.0017 2 18.7517 5.75 18.7517 10.3759C18.7517 15.0017 15.0017 18.7517 10.3759 18.7517C5.75 18.7517 2 15.0017 2 10.3759Z" fill="currentColor"></path>
@@ -65,23 +74,24 @@
             <svg width="1em" height="1em" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <g><path fill="none" stroke="currentColor" d="M11.6,5.1L12,5.5l0.4-0.4c0.4-0.4,0.9-0.8,1.4-1.1c0.8-0.4,1.7-0.6,2.6-0.6c1.5,0.1,3,0.8,4,1.9   c1,1.1,1.6,2.6,1.5,4.1l0,0v0c0,1.8-0.8,3.1-1.8,4.3c-2.1,2.4-5,5-7.8,6.7L12,20.6l-0.3-0.2C9,18.7,6.1,16.2,4,13.7   c-1-1.1-1.8-2.5-1.8-4.3l0,0l0,0c-0.1-1.5,0.5-3,1.5-4.1c1-1.1,2.5-1.8,4-1.9c0.9,0,1.8,0.2,2.6,0.6C10.8,4.4,11.2,4.7,11.6,5.1z"></path></g>
             </svg>
-            <a href="user.php">
+            <a href="#">
                 <svg width="1em" height="1em" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2.5C10.8274 2.5 9.83605 2.91168 8.99887 3.74887C8.16168 4.58605 7.75 5.57741 7.75 6.75C7.75 7.92259 8.16168 8.91395 8.99887 9.75113C9.83605 10.5883 10.8274 11 12 11C13.1726 11 14.1639 10.5883 15.0011 9.75113C15.8383 8.91395 16.25 7.92259 16.25 6.75C16.25 5.57741 15.8383 4.58605 15.0011 3.74887C14.1639 2.91168 13.1726 2.5 12 2.5ZM8.29176 3.04176C9.31499 2.01853 10.5601 1.5 12 1.5C13.4399 1.5 14.685 2.01853 15.7082 3.04176C16.7315 4.06499 17.25 5.31009 17.25 6.75C17.25 8.18991 16.7315 9.43501 15.7082 10.4582C14.685 11.4815 13.4399 12 12 12C10.5601 12 9.31499 11.4815 8.29176 10.4582C7.26853 9.43501 6.75 8.18991 6.75 6.75C6.75 5.31009 7.26853 4.06499 8.29176 3.04176ZM12 14.2431C10.7333 14.2431 9.48636 14.3917 8.25832 14.6892C7.03125 14.9863 5.82085 15.4326 4.62674 16.0293C4.13706 16.2833 3.74496 16.6492 3.44562 17.1367C3.14843 17.6207 3 18.1484 3 18.7306V21.5556H21V18.7306C21 18.1484 20.8516 17.6207 20.5544 17.1367C20.255 16.6492 19.8629 16.2833 19.3732 16.0293C18.1791 15.4325 16.9687 14.9863 15.7417 14.6892C14.5136 14.3917 13.2667 14.2431 12 14.2431ZM8.02293 13.7173C9.32822 13.4011 10.6542 13.2431 12 13.2431C13.3458 13.2431 14.6718 13.4011 15.9771 13.7173C17.2823 14.0334 18.5646 14.5069 19.8236 15.1365L19.8297 15.1395C20.4866 15.4793 21.0138 15.9738 21.4066 16.6135C21.8021 17.2576 22 17.9669 22 18.7306V22.5556H2V18.7306C2 17.9669 2.19792 17.2576 2.59345 16.6135C2.98621 15.9738 3.51344 15.4793 4.17029 15.1396L4.17637 15.1364C5.43542 14.5069 6.71774 14.0334 8.02293 13.7173Z" fill="currentColor"></path>
                 </svg>
             </a>
-            <svg id="bar" width="1em" height="1em" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <svg id="show_bar" width="1em" height="1em" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M21 6.5H3V5.5H21V6.5ZM21 12.5H3V11.5H21V12.5ZM21 18.5H3V17.5H21V18.5Z" fill="currentColor"></path>
             </svg>
         </div>
+
     </header>
 
-    <!-- 비주얼 메뉴 -->
-    <section class="visual">
+    <!-- 비주얼 영역 -->
+    <section id="visual">
         <img src="https://interiorteacher.com/_next/image?url=https%3A%2F%2Fstatic.interiorteacher.com%2Fwidget%2Fmain%2Fbackground%2F46%2Fundefinedimage%20(89)_21258528.jpg&w=1920&q=80" alt="visual-img">
 
         <div class="visual_container">
-            <div class="text-contents">
+            <div class="text_contents">
                 <p>promotion</p>
                 <h1>
                     공간감.<br>
@@ -95,13 +105,13 @@
         </div>
     </section>
 
-    <!-- 메인 화면 -->
+    <!-- 메인 섹션 -->
     <main>
 
         <div class="main_container">
 
             <!-- 고객사례 영역 -->
-            <section class="consult_example">
+            <section id="consult_example">
 
                 <!-- 섹션 타이틀 -->
                 <div class="section_title">
@@ -190,7 +200,7 @@
             </section>
 
             <!-- 가구 스타일링 영역 -->
-            <section class="styling">
+            <section id="styling">
 
                 <!-- 섹션 타이틀 -->
                 <div class="section_title">
@@ -268,16 +278,23 @@
 
     </main>
 
-    <!-- 푸터 메뉴 -->
+    <!-- 푸터 영역 -->
     <footer>
+
+        <!-- 푸터 카테고리 -->
         <div class="footer-top">
+
+            <!-- 문의 방법 -->
             <div class="inquiry_button">
                 <button type="button">카카오톡 상담</button>
                 <button type="button">입점 및 제휴 문의</button>
                 <button type="button">B2B 대량 구매 문의</button>
             </div>
 
+            <!-- 편의 안내 -->
             <div class="category">
+
+                <!-- 고객센터 -->
                 <div class="customer">
                     <p>고객센터</p>
                     <span class="call">02-1234-5678</span>
@@ -285,9 +302,10 @@
                     <span>주말 및 공휴일 휴무</span>
                 </div>
 
+                <!-- 가이드 -->
                 <div class="guide">
                     <p id="guide_btn">이용안내</p>
-                    <div class="guide-menu">
+                    <div class="guide_menu">
                         <a href="#">자주 묻는 질문</a>
                         <a href="#">취소 & 환불약관</a>
                         <a href="#">이용약관</a>
@@ -298,6 +316,7 @@
                 </div>
             </div>
 
+            <!-- 소셜 미디어 아이콘 -->
             <div class="social_icon">
                 <i class="fa-brands fa-instagram"></i>
                 <i class="fa-brands fa-youtube"></i>
@@ -306,6 +325,7 @@
             </div>
         </div>
 
+        <!-- 회사 정보 -->
         <div class="footer-bottom">
             <p>
                 <span class="footer-company_info">주식회사 인테리어티쳐</span>
@@ -317,6 +337,7 @@
                 <span>&copy;2024 LoremCompany. All Rights Reserved.</span>
             </p>
         </div>
+
     </footer>
 
     <!-- top 버튼 -->
@@ -326,26 +347,30 @@
         </svg>
     </a>
 
-    <!-- 사이드바 메뉴 -->
-    <section class="side_wrap">
-    
-        <div class="side_bar">
-            <div class="close_sidebar">
-                <i class="fa-solid fa-xmark"></i>
+    <!-- 사이드바 영역 -->
+    <section id="bar_wrap" class="show_wrap">
+
+        <div class="bar_box">
+
+            <!-- 사이드바 닫기 버튼 -->
+            <div class="close_bar">
+                <svg id="remove_bar" width="1em" height="1em" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M9.99165 9.40191L16.0605 3.33301L16.6498 3.92226L10.5809 9.99116L16.6495 16.0597L16.0602 16.649L9.99165 10.5804L3.92307 16.649L3.33381 16.0597L9.40239 9.99116L3.3335 3.92226L3.92275 3.33301L9.99165 9.40191Z" fill="currentColor"></path>
+                </svg>
             </div>
 
-            <div class="submenu_title sidebar_contents">
+            <!-- 사이드바 서브메뉴 -->
+            <div class="bar_contents bar_submenu">
                 <p>살펴보기</p>
                 <ul>
-                    <li><a href="">나만의 가구 만들기</a></li>
-                    <li><a href="">구매상담 신청하기</a></li>
-                    <li><a href="">컨설팅 사례</a></li>
+                    <li><a href="#">나만의 가구 만들기</a></li>
+                    <li><a href="#">구매상담 신청하기</a></li>
+                    <li><a href="#">컨설팅 사례</a></li>
                 </ul>
             </div>
 
-            <div class="sidebar_contents mypage">
+            <div class="bar_contents mypage">
                 <p>마이페이지</p>
-
                 <ul>
                     <li>
                         <a href="#">내 정보</a>
@@ -369,9 +394,8 @@
                 </ul>
             </div>
 
-            <div class="sidebar_contents mypage">
+            <div class="bar_contents question">
                 <p>자주 묻는 질문</p>
-
                 <ul>
                     <li>
                         <a href="#">배송관련</a>
@@ -390,13 +414,16 @@
                 </ul>
             </div>
 
-            <div class="side_login">
-                <a href="user.php">로그인</a>
+            <div class="bar_login">
+                <a href="#">로그인</a>
             </div>
+
         </div>
 
     </section>
 
-    <script src="Script/counsel.js"></script>
+    <!-- 스크립트 -->
+    <script src="Script/script.js"></script>
+
 </body>
 </html>

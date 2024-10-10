@@ -260,12 +260,3 @@ function checking(check) {
         return false;
     }
 }
-
-/* 사이드바 */
-const barBtn = document.getElementById('bar');
-const sideWrap = document.querySelector('.side_wrap');
-const sideBar = document.querySelector('.side_bar');
-
-window.addEventListener('DOMContentLoaded', function() {
-    console.log(barBtn);
-});
