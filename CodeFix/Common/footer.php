@@ -84,7 +84,7 @@
                 <p>살펴보기</p>
                 <ul>
                     <li><a href="#">나만의 가구 만들기</a></li>
-                    <li><a href="#">구매상담 신청하기</a></li>
+                    <li><a href="./counsel_view.php">구매상담 신청하기</a></li>
                     <li><a href="#">컨설팅 사례</a></li>
                 </ul>
             </div>
@@ -135,7 +135,7 @@
             </div>
 
             <div class="bar_login">
-                <a href="#">로그인</a>
+                <a href="./login.php">로그인</a>
             </div>
 
         </div>
