@@ -183,36 +183,42 @@ submitBtn.addEventListener('click', function(event) {
                 textRequest.value !== "") {
                     alert("성명을 입력해 주세요.");
                     inputName.focus();
+                    return false;
                 } else if (inputName.value !== "" && inputPhone.value === "" &&
                     inputEmail.value !== "" && inputDate.value !== "" &&
                     textRequest.value !== "") {
                         alert("전화번호를 입력해 주세요.");
                         inputPhone.focus();
+                        return false;
                     } else if (inputName.value !== "" && inputPhone.value !== "" &&
                         inputEmail.value === "" && inputDate.value !== "" &&
                         textRequest.value !== "") {
                             alert("이메일을 입력해 주세요.");
                             inputEmail.focus();
+                            return false;
                         } else if (inputName.value !== "" && inputPhone.value !== "" &&
                             inputEmail.value !== "" && inputDate.value === "" &&
                             textRequest.value !== "") {
                                 alert("예약일자를 입력해 주세요.");
                                 inputDate.focus();
+                                return false;
                             } else if (inputName.value !== "" && inputPhone.value !== "" &&
                                 inputEmail.value !== "" && inputDate.value !== "" &&
                                 textRequest.value === "") {
                                     alert("문의하실 내용을 입력해 주세요.");
                                     textRequest.focus();
+                                    return false;
                                 } else {
                                     alert("필수 정보를 입력해 주세요.");
                                     location.href = "#main";
+                                    return false;
                                 }
                                 
-                                nonMembersModal.classList.remove("show-modal");
-                                event.preventDefault();
-                                return false;
-                            }
-                            checking(event);
+        nonMembersModal.classList.remove("show-modal");
+        event.preventDefault();
+        return false;
+    }
+    checking(event);
 });
 
 const viewName = document.getElementById('view-name');
