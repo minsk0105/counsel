@@ -1,0 +1,176 @@
+header {
+    background-color: white;
+}
+
+header .header-left > .logo path,
+header .header-left > ul > li > a,
+header .header-right path {
+    color: rgb(30, 30, 30);
+}
+
+:root {
+    --color: gray;
+    --border: 1px solid rgb(196, 196, 196);
+    --big-font: 30px;
+    --normal-font: 16px;
+    --small-font: 14px;
+}
+
+/* 마이페이지 메인 섹션 */
+#mypage {
+    padding: 130px 80px;
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.page_contents {
+    width: 800px;
+}
+
+/* 회원 정보 표시 및 로그아웃 버튼 */
+.page_header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 30px;
+    border-bottom: var(--border);
+}
+
+.user_info h1 {
+    display: inline-block;
+    font-size: var(--big-font);
+    margin-bottom: 5px;
+}
+
+.user_info span {
+    margin-left: 10px;
+    font-size: var(--normal-font);
+    font-weight: 200;
+    color: var(--color);
+}
+
+.user_info p {
+    display: block;
+    font-size: 18px;
+    color: var(--color);
+}
+
+.logout_button {
+    font-size: 12px;
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: var(--border);
+    color: var(--color);
+    cursor: pointer;
+}
+
+.logout_button:hover {
+    color: rgb(30, 30, 30);
+    border-color: rgb(30, 30, 30);
+}
+
+/* 세부정보 */
+.details {
+    margin-top: 30px;
+    width: 100%;
+    height: 150px;
+    border: var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+}
+
+.details > div {
+    width: 50%;
+    height: 100%;
+    padding: 20px;
+}
+
+.details > div:nth-last-of-type(1) {
+    border-left: var(--border);
+}
+
+.details_title {
+    font-size: var(--small-font);
+    color: var(--color);
+}
+
+.details_info {
+    margin-top: 20px;
+    font-size: var(--normal-font);
+    font-weight: 200;
+}
+
+/* 사용자 내역 */
+.user_history {
+    margin-top: 30px;
+    width: 100%;
+    height: 100px;
+    border: var(--border);
+    overflow: hidden;
+    border-radius: 8px;
+    display: flex;
+}
+
+.user_history > div {
+    padding: 20px;
+    text-align: center;
+}
+
+.user_history > div p {
+    font-size: var(--small-font);
+}
+
+.user_history > div h2 {
+    margin-top: 10px;
+    font-size: 25px;
+    font-weight: 200;
+}
+
+.shopping_cart {
+    width: 34%;
+    height: 100%;
+    border-left: var(--border);
+    border-right: var(--border);
+}
+
+.design_project,
+.buy_history {
+    width: 33%;
+    height: 100%;
+}
+
+/* 사용자 상담 신청 내역 */
+.counsel_history {
+    margin-top: 70px;
+}
+
+.counsel_history h1 {
+    font-size: 25px;
+}
+
+.counsel_history a {
+    margin-top: 15px;
+    display: block;
+    height: 60px;
+    line-height: 65px;
+    border-bottom: var(--border);
+    overflow: hidden;
+    font-size: var(--normal-font);
+    cursor: pointer;
+}
+
+.counsel_history a:hover {
+    border-color: rgb(30, 30, 30);
+}
+
+.counsel_history i {
+    font-size: var(--normal-font);
+    margin-right: 15px;
+    color: var(--color);
+}

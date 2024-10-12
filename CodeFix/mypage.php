@@ -1,0 +1,61 @@
+<?php require_once('Common/header.php') ?>
+<head>
+    <link rel="stylesheet" href="CSS/mypage.css">
+</head>
+
+    <!-- 마이페이지 메인 섹션 -->
+    <section id="mypage">
+
+        <div class="page_contents">
+
+            <!-- 사용자 정보 및 로그아웃 버튼  -->
+            <div class="page_header">
+                <div class="user_info">
+                    <h1>hello1234</h1>
+                    <span>홍길동</span>
+                    <p>consult@example.com</p>
+                </div>
+                <a href="#" class="logout_button">로그아웃</a>
+            </div>
+
+            <!-- 세부정보 -->
+            <div class="details">
+                <div class="user_add">
+                    <p class="details_title">배송지</p>
+                    <p class="details_info">인천광역시 부평구 산곡3동 화랑로111</p>
+                </div>
+
+                <div class="user_phone">
+                    <p class="details_title">전화번호</p>
+                    <p class="details_info">010-1234-5678</p>
+                </div>
+
+            </div>
+            
+            <!-- 사용자 내역 -->
+            <div class="user_history">
+                <div class="design_project">
+                    <p>내가 만든 가구</p>
+                    <h2>0</h2>
+                </div>
+                <div class="shopping_cart">
+                    <p>장바구니</p>
+                    <h2>0</h2>
+                </div>
+                <div class="buy_history">
+                    <p>구매 내역</p>
+                    <h2>0</h2>
+                </div>
+            </div>
+
+            <!-- 사용자 상담 신청 내역 -->
+            <div class="counsel_history">
+                <h1>나의 상담 신청 내역</h1>
+                <a href="#"><i class="fa-solid fa-arrow-right-long"></i>나의 신청 내역 보러가기</a>
+            </div>
+
+        </div>
+
+    </section>
+
+<?php require_once('Common/footer.php') ?>

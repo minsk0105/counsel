@@ -1,0 +1,69 @@
+header {
+    background-color: white;
+}
+
+header .header-left > .logo path,
+header .header-left > ul > li > a,
+header .header-right path {
+    color: rgb(30, 30, 30);
+}
+
+#register {
+    width: 100%;
+    min-height: 120vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 130px 80px;
+    overflow: hidden;
+}
+
+.register_info {
+    width: 400px;
+}
+
+.section_title {
+    display: block;
+    text-align: center;
+    line-height: 40px;
+    font-size: 25px;
+    margin-bottom: 40px;
+}
+
+label {
+    margin-top: 15px;
+    display: block;
+    font-size: 14px;
+    font-weight: 200;
+}
+
+.register_info input {
+    width: 100%;
+    height: 55px;
+    font-size: 14px;
+    margin-top: 8px;
+    padding: 10px 15px;
+    border: 1px solid rgb(196, 196, 196);
+    border-radius: 8px;
+}
+
+.register_info input::placeholder {
+    color: rgb(196, 196, 196);
+}
+
+.push_register {
+    width: 100%;
+    height: 60px;
+    margin-top: 40px;
+    border: none;
+    border-radius: 8px;
+    background-color: rgb(30, 30, 30);
+    color: #eee;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1150px) {
+    #register {
+        padding: 130px 20px;
+    }
+}

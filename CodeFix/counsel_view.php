@@ -43,7 +43,7 @@
 
                     <!-- 상담유형 -->
                     <dl>
-                        <dt>상담유형</dt>
+                        <dt><span>*</span> 상담유형</dt>
                         <dd>
                             <input type="radio" name="way" value="전화상담" checked><span>전화상담</span>
                             <input type="radio" name="way" value="방문상담"><span>방문상담</span>
@@ -52,31 +52,31 @@
     
                     <!-- 이름 -->
                     <dl>
-                        <dt>이름</dt>
+                        <dt><span>*</span> 이름</dt>
                         <dd><input type="text" name="name" id="name" placeholder="이름"></dd>
                     </dl>
     
                     <!-- 휴대전화 번호 -->
                     <dl>
-                        <dt>휴대전화 번호</dt>
+                        <dt><span>*</span> 휴대전화 번호</dt>
                         <dd><input type="text" name="phone" id="phone" placeholder="01012345678"></dd>
                     </dl>
     
                     <!-- 이메일 -->
                     <dl>
-                        <dt>이메일</dt>
+                        <dt><span>*</span> 이메일</dt>
                         <dd><input type="text" name="email" id="email" placeholder="consult@example.com"></dd>
                     </dl>
     
                     <!-- 예약일자 -->
                     <dl>
-                        <dt>예약일자</dt>
+                        <dt><span>*</span> 예약일자</dt>
                         <dd><input type="text" name="date" id="date" placeholder="2000-00-00"></dd>
                     </dl>
     
                     <!-- 문의사항 -->
                     <dl>
-                        <dt>문의사항</dt>
+                        <dt><span>*</span> 문의사항</dt>
                         <dd><textarea name="request" id="request"></textarea></dd>
                         <dd>
                             <p class="request_comment">
@@ -89,7 +89,7 @@
                     <!-- 개인정보처리방침 -->
                     <dl style="position: relative;">
                         <dt class="personal_dd">
-                            <p>개인정보 취급방침 (필수)</p>
+                            <p><span>*</span>&nbsp;개인정보 취급방침 (필수)</p>
                             <p><input type="checkbox" name="agree" id="agree">이용약관 동의</p>
                         </dt>
                         <dd>

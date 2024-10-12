@@ -50,12 +50,17 @@ dl {
 }
 
 dt {
-    font-size: 16px;
+    font-size: 14px;
+    font-weight: 200;
     font-weight: bold;
 }
 
+dt span {
+    color: #0072BB;
+}
+
 dd {
-    margin-top: 10px;
+    margin-top: 15px;
     display: flex;
     align-items: center;
 }
@@ -74,10 +79,15 @@ input[name="way"]:nth-of-type(1) {
 
 input[type="text"] {
     width: 100%;
-    font-size: 16px;
+    height: 45px;
+    font-size: 14px;
     padding: 10px 15px;
     border: 1px solid rgb(196, 196, 196);
     border-radius: 8px;
+}
+
+input[type="text"]::placeholder {
+    color: rgb(196, 196, 196);
 }
 
 #request {
@@ -88,7 +98,7 @@ input[type="text"] {
     border: 1px solid rgb(196, 196, 196);
     border-radius: 8px;
     padding: 15px 10px;
-    font-size: 16px;
+    font-size: 14px;
 }
 
 .request_comment {
