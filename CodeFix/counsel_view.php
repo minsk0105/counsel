@@ -157,10 +157,48 @@
     
                 </div>
 
+                <!-- 상담받을 제품 선택란 및 사용자 주변 서비스 센터 지도 -->
+                <div class="select_category">
+                    <div class="category_wrap">
+                        <div class="category_title">
+                            <p>
+                                <span>제품 선택</span>
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </p>
+                        </div>
+                        <div class="category_contents"></div>
+                    </div>
+
+                    <div class="category_wrap">
+                        <div class="category_title">
+                            <p>
+                                <span>대리점/서비스센터</span>
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </p>
+                        </div>
+                        <div class="category_contents map_container" style="border-bottom: 1px solid rgb(196, 196, 196);">
+                            <div id="map"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 신청 버튼 -->
+                <div class="counsel-submit_button">
+                    <!-- 회원으로 신청 버튼 및 회원 신청 모달창  -->
+                    <button type="button" id="members" value="members">회원으로 신청</button>
+
+                    <!-- 비회원으로 신청 버튼 및 비회원 신청 모달창  -->
+                    <button type="button" id="non-members" value="non_members">비회원으로 신청</button>
+                </div>
+
             </form>
 
         </div>
 
     </section>
+
+    <!-- 네이버 오픈 API -->
+    <script src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=YOUR_CLIENT_ID"></script>
+    <script src="Script/counsel.js"></script>
 
 <?php require_once('Common/footer.php'); ?>

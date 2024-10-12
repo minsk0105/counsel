@@ -10,7 +10,7 @@ main {
     min-width: 1200px;
     max-width: 1903px;
     padding: 0 80px;
-    transition: 0.3s;
+    transition: 0.3s ease;
 }
 
 /* 고객사례 영역 */
