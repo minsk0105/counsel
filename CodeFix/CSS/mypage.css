@@ -181,7 +181,7 @@ header .header-right path {
     }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 930px) {
     .details {
         min-height: 100px;
     }
@@ -190,9 +190,7 @@ header .header-right path {
         margin-top: 10px;
         font-size: 14px;
     }
-}
 
-@media screen and (max-width: 460px) {
     .user_info h1 {
         font-size: 25px;
     }
@@ -228,5 +226,17 @@ header .header-right path {
 
     .counsel_history h1 {
         font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 860px) {
+    .page_contents {
+        max-width: 500px;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .page_contents {
+        max-width: 320px;
     }
 }

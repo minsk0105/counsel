@@ -1,3 +1,107 @@
+/* 비회원 신청 조회 모달창 */
+.view_modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    z-index: 2;
+    display: none;
+    padding: 0 20px;
+}
+
+.show_view {
+    display: block;
+}
+
+.view_box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    padding: 20px;
+}
+
+.close_view_box {
+    width: 100%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+.close_view_box svg {
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.close_view_box path {
+    cursor: pointer;
+}
+
+.view_box > h2 {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.view_box label {
+    display: block;
+    margin-top: 20px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.view_box input {
+    margin-top: 10px;
+}
+
+.view_box ul {
+    margin-top: 25px;
+}
+
+.view_box li {
+    margin-bottom: 10px;
+}
+
+.view_box p {
+    font-size: 14px;
+    color: gray;
+}
+
+.view_submit {
+    margin-top: 25px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.view_submit button {
+    margin: 0 10px;
+    width: 130px;
+    height: 40px;
+    border: none;
+    background-color: #0072BB;
+    color: #eee;
+    cursor: pointer;
+    font-size: 14px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.view_submit button:nth-of-type(1) {
+    background-color: gray;
+}
+
 /* 구매상담 신청 영역 */
 #consult {
     width: 100%;
@@ -299,6 +403,10 @@ input[type="text"]::placeholder {
     border-radius: 5px;
 }
 
+.modal_button button:nth-of-type(1) {
+    background-color: gray;
+}
+
 @media screen and (max-width: 1150px) {
     .consult_container {
         padding: 0 20px;
@@ -332,11 +440,8 @@ input[type="text"]::placeholder {
         font-size: 14px;
     }
 
-    .modal_box {
+    .modal_box,
+    .view_box {
         width: 320px;
-    }
-
-    .modal_button button {
-        width: 100px;
     }
 }

@@ -50,7 +50,7 @@
                 <li><a href="#">서비스 소개</a></li>
                 <li><a href="#">가구 쇼핑</a></li>
                 <li>
-                    <a href="#">구매 컨설팅</a>
+                    <a type="button">구매 컨설팅</a>
                     <ul class="nav_submenu">
                         <li><a href="#">나만의 가구 만들기</a></li>
                         <li><a href="./counsel_view.php">구매상담 신청하기</a></li>

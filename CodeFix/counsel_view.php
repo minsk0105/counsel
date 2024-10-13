@@ -15,11 +15,43 @@
                 </h1>
                 <div class="button_menu">
                     <a href="#">구매상담 신청</a>
-                    <a href="#">비회원 신청 조회</a>
+                    <a type="button" id="view_btn">비회원 신청 조회</a>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- 비회원 신청 조회 모달창 -->
+    <div class="view_modal">
+
+        <form action="" method="post">
+            <div class="view_box">
+                <div class="close_view_box">
+                    <svg id="remove_view" width="1em" height="1em" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M9.99165 9.40191L16.0605 3.33301L16.6498 3.92226L10.5809 9.99116L16.6495 16.0597L16.0602 16.649L9.99165 10.5804L3.92307 16.649L3.33381 16.0597L9.40239 9.99116L3.3335 3.92226L3.92275 3.33301L9.99165 9.40191Z" fill="currentColor"></path>
+                    </svg>
+                </div>
+                <h2>비회원 신청 조회</h2>
+
+                <label><span style="color: #0072BB;">*</span> 성명</label>
+                <input type="text" name="name" placeholder="성명">
+
+                <label><span style="color: #0072BB;">*</span> 전화번호</label>
+                <input type="text" name="phone" placeholder="01012345678">
+
+                <ul>
+                    <li><p>- 구매 상담 신청 시 인증 받은 성명과 휴대폰 번호를 입력하시면 구매 상담 신청 내역을 확인하실 수 있습니다.</p></li>
+                    <li><p>- 회원이신 경우 마이페이지 > 나의 상담 신청 내역에서 확인 가능합니다.</p></li>
+                </ul>
+
+                <div class="view_submit">
+                    <button type="button" id="view_cancel">취소</button>
+                    <button type="button" id="push_view">확인</button>
+                </div>
+            </div>
+        </form>
+
+    </div>
 
     <!-- 구매상담 신청 영역 -->
     <section id="consult">

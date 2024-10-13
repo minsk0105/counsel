@@ -93,7 +93,7 @@
                 <p>마이페이지</p>
                 <ul>
                     <li>
-                        <a href="#">내 정보</a>
+                        <a href="./Process/mypage_process.php">내 정보</a>
                         <a href="#">장바구니</a>
                     </li>
 

@@ -184,3 +184,21 @@ function checking(check) {
         return false;
     }
 }
+
+/* 비회원 신청 조회 모달창 */
+const viewModal = document.querySelector('.view_modal');
+const removeView = document.getElementById('remove_view');
+const viewCancel = document.getElementById('view_cancel');
+const openView = document.getElementById('view_btn');
+
+openView.addEventListener('click', function() {
+    viewModal.classList.add("show_view");
+});
+
+removeView.addEventListener('click', function() {
+    viewModal.classList.remove("show_view");
+});
+
+viewCancel.addEventListener('click', function() {
+    viewModal.classList.remove("show_view");
+});
