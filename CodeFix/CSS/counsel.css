@@ -197,7 +197,7 @@ input[type="text"]::placeholder {
     align-items: center;
 }
 
-.counsel-submit_button button {
+.counsel-submit_button > button {
     display: inline-block;
     margin: 0 10px;
     width: 200px;
@@ -213,6 +213,90 @@ input[type="text"]::placeholder {
     align-items: center;
     overflow: hidden;
     border-radius: 8px;
+}
+
+/* 신청 모달 */
+.non_members_modal,
+.members_modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    z-index: 2;
+    padding: 0 20px;
+    display: none;
+}
+
+.show_modal {
+    display: block;
+}
+
+.modal_box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 250px;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    padding: 20px;
+    text-align: center;
+}
+
+.close_modal {
+    width: 100%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+.close_modal svg {
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.close_modal path {
+    cursor: pointer;
+}
+
+.modal_box h2 {
+    font-size: 25px;
+    margin: 20px 0 10px 0;
+}
+
+.modal_box p {
+    display: block;
+    font-size: 18px;
+}
+
+.modal_button {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+}
+
+.modal_button button {
+    margin: 0 10px;
+    width: 130px;
+    height: 40px;
+    border: none;
+    background-color: #0072BB;
+    color: #eee;
+    cursor: pointer;
+    font-size: 14px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 5px;
 }
 
 @media screen and (max-width: 1150px) {
@@ -242,9 +326,17 @@ input[type="text"]::placeholder {
         min-width: 340px;
     }
 
-    .counsel-submit_button button {
+    .counsel-submit_button > button {
         width: 130px;
         padding: 0 15px;
         font-size: 14px;
+    }
+
+    .modal_box {
+        width: 320px;
+    }
+
+    .modal_button button {
+        width: 100px;
     }
 }

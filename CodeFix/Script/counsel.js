@@ -60,7 +60,6 @@ const accordionBtn = document.querySelectorAll('.category_title');
 accordionBtn.forEach(function(btn) {
     btn.addEventListener('click', function(event) {
         const target = event.target;
-        const title_text = btn.querySelector('.category_title p');
 
         accordionBtn.forEach(function(item) {
             const parent = item.parentNode;
@@ -78,3 +77,110 @@ accordionBtn.forEach(function(btn) {
     
     });
 });
+
+/* 신청 버튼 모달창 */
+const nonMembersBtn = document.getElementById('non_members');
+const membersBtn = document.getElementById('members');
+const nonMembersModal = document.querySelector('.non_members_modal');
+const membersModal = document.querySelector('.members_modal');
+const closeModal = document.querySelectorAll('.close_modal > svg');
+const cancelBtn = document.querySelectorAll('.cancel');
+
+nonMembersBtn.addEventListener('click', function() {
+    nonMembersModal.classList.add("show_modal");
+});
+
+membersBtn.addEventListener('click', function() {
+    membersModal.classList.add("show_modal");
+});
+
+closeModal.forEach(function(btn) {
+    btn.addEventListener('click', function(event) {
+        const parentModal = event.target.parentNode.parentNode.parentElement;
+    
+        parentModal.classList.remove("show_modal");
+    });
+});
+
+cancelBtn.forEach(function(btn) {
+    btn.addEventListener('click', function(event) {
+        const parentModal = event.target.parentNode.parentNode.parentElement;
+    
+        parentModal.classList.remove("show_modal");
+    });
+});
+
+
+// 상담 신청 입력란 입력 여부 확인
+const submitBtns = document.querySelectorAll('#counsel_form button[type="submit"]');
+
+const inputName = document.getElementById('name');
+const inputPhone = document.getElementById('phone');
+const inputEmail = document.getElementById('email');
+const inputDate = document.getElementById('date');
+const inputText = document.getElementById('request');
+
+submitBtns.forEach(function(submitBtn) {
+    submitBtn.addEventListener('click', function(event) {
+        if (inputName.value === "" || inputPhone.value === "" || inputEmail.value === "" || inputDate.value === "" || inputText.value === "") {
+            
+            if (inputName.value === "" && inputPhone.value !== "" && inputEmail.value !== "" && inputDate.value !== "" && inputText.value !== "") {
+                alert ("성명을 입력해 주세요.");
+                inputName.focus();
+            }
+
+            else if (inputName.value !== "" && inputPhone.value === "" && inputEmail.value !== "" && inputDate.value !== "" && inputText.value !== "") {
+                alert ("전화번호를 입력해 주세요.");
+                inputPhone.focus();
+            }
+
+            else if (inputName.value !== "" && inputPhone.value !== "" && inputEmail.value === "" && inputDate.value !== "" && inputText.value !== "") {
+                alert ("이메일을 입력해 주세요.");
+                inputEmail.focus();
+            }
+
+            else if (inputName.value !== "" && inputPhone.value !== "" && inputEmail.value !== "" && inputDate.value === "" && inputText.value !== "") {
+                alert ("예약일자를 입력해 주세요.");
+                inputDate.focus();
+            }
+
+            else if (inputName.value !== "" && inputPhone.value !== "" && inputEmail.value !== "" && inputDate.value !== "" && inputText.value === "") {
+                alert ("문의사항에 내용을 입력해 주세요.");
+                inputText.focus();
+            }
+            
+            else {
+                alert("필수 정보를 입력해 주세요.");
+                location.href = "#consult";
+            }
+
+            
+            membersModal.classList.remove("show_modal");
+            nonMembersModal.classList.remove("show_modal");
+            event.preventDefault();
+            return false;
+            
+        }
+
+        checking(event);
+    });
+});
+
+//  개인정보처리방침 동의 여부 확인
+const agreeCheck = document.getElementById('agree');
+let checked;
+
+agreeCheck.addEventListener('change', function() {
+    checked = agreeCheck.checked;
+});
+
+function checking(check) {
+    if (!checked) {
+        alert("이용약관 동의란에 체크해 주세요.");
+        agreeCheck.focus();
+        membersModal.classList.remove("show_modal");
+        nonMembersModal.classList.remove("show_modal");
+        check.preventDefault();
+        return false;
+    }
+}

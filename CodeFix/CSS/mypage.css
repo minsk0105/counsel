@@ -24,7 +24,6 @@ header .header-right path {
     overflow: hidden;
     display: flex;
     justify-content: center;
-    align-items: center;
 }
 
 .page_contents {

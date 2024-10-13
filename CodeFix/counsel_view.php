@@ -36,7 +36,7 @@
                 <h2>5300-5300</h2>
             </div>
 
-            <form action="" method="post">
+            <form action="counsel_process.php" method="post" id="counsel_form">
 
                 <!-- 상담 신청 폼 -->
                 <div class="user_counsel">
@@ -187,8 +187,48 @@
                     <!-- 회원으로 신청 버튼 및 회원 신청 모달창  -->
                     <button type="button" id="members" value="members">회원으로 신청</button>
 
+                    <div class="members_modal">
+                        
+                        <div class="modal_box">
+                            <div class="close_modal">
+                                <svg id="remove_non_members" width="1em" height="1em" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M9.99165 9.40191L16.0605 3.33301L16.6498 3.92226L10.5809 9.99116L16.6495 16.0597L16.0602 16.649L9.99165 10.5804L3.92307 16.649L3.33381 16.0597L9.40239 9.99116L3.3335 3.92226L3.92275 3.33301L9.99165 9.40191Z" fill="currentColor"></path>
+                                </svg>
+                            </div>
+
+                            <h2>회원 신청</h2>
+                            <p>회원 신청을 하시겠습니까?</p>
+
+                            <div class="modal_button">
+                                <button type="button" class="cancel">취소</button>
+                                <button type="submit" name="members">확인</button>
+                            </div>
+                        </div>
+
+                    </div>
+
                     <!-- 비회원으로 신청 버튼 및 비회원 신청 모달창  -->
-                    <button type="button" id="non-members" value="non_members">비회원으로 신청</button>
+                    <button type="button" id="non_members" value="non_members">비회원으로 신청</button>
+
+                    <div class="non_members_modal">
+                        
+                        <div class="modal_box">
+                            <div class="close_modal">
+                                <svg id="remove_non_members" width="1em" height="1em" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M9.99165 9.40191L16.0605 3.33301L16.6498 3.92226L10.5809 9.99116L16.6495 16.0597L16.0602 16.649L9.99165 10.5804L3.92307 16.649L3.33381 16.0597L9.40239 9.99116L3.3335 3.92226L3.92275 3.33301L9.99165 9.40191Z" fill="currentColor"></path>
+                                </svg>
+                            </div>
+
+                            <h2>비회원 신청</h2>
+                            <p>비회원 신청을 하시겠습니까?</p>
+
+                            <div class="modal_button">
+                                <button type="button" class="cancel">취소</button>
+                                <button type="submit" name="non_members">확인</button>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
 
             </form>
