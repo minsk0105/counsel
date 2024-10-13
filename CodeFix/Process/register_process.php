@@ -107,7 +107,7 @@
                 if ($result) { ?>
                     <script>
                         alert("성공적으로 가입되었습니다.");
-                        location.href = '../sign_up.php';
+                        location.href = '../login.php';
                     </script>
                 <?php } else {
                     echo "회원가입 실패";

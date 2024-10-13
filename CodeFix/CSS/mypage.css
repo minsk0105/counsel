@@ -60,9 +60,11 @@ header .header-right path {
 }
 
 .logout_button {
+    display: inline-block;
     font-size: 12px;
     padding: 10px 15px;
     border-radius: 8px;
+    background-color: inherit;
     border: var(--border);
     color: var(--color);
     cursor: pointer;

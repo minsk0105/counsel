@@ -36,18 +36,18 @@
                 <p class="user_title">아이디/비밀번호 로그인 하기</p>
 
                 <!-- 로그인 입력 폼 -->
-                <form action="" method="post">
+                <form action="Process/login_process.php" method="post">
                     <div class="id-box">
                         <label>아이디</label>
-                        <input type="text" name="id" placeholder="아이디를 입력해 주세요.">
+                        <input type="text" name="id" id="id" placeholder="아이디를 입력해 주세요.">
                     </div>
 
                     <div class="password-box">
                         <label>비밀번호</label>
-                        <input type="password" name="password" placeholder="비밀번호를 입력해 주세요.">
+                        <input type="password" name="password" id="pass" placeholder="비밀번호를 입력해 주세요.">
                     </div>
 
-                    <input type="submit" value="로그인" class="submit">
+                    <input type="submit" value="로그인" class="submit" name="login_submit">
                 </form>
 
                 <!-- 유저 정보 찾기 -->
@@ -70,5 +70,30 @@
         </div>
 
     </section>
+
+    <script>
+        const submitBtn = document.querySelector('.submit');
+        const inputId = document.getElementById('id');
+        const inputPass = document.getElementById('pass');
+        
+        submitBtn.addEventListener('click', function(event) {
+            if (inputId.value === "" || inputPass.value === "") {
+
+                if (inputId.value === "" && inputPass.value !== "") {
+                    alert("아이디를 입력해 주세요.");
+                    inputId.focus();
+                } else if (inputId.value !== "" && inputPass.value === "") {
+                    alert("비밀번호를 입력해 주세요.");
+                    inputPass.focus();
+                } else {
+                    alert("아이디와 비밀번호를 입력해 주세요.");
+                }
+
+                event.preventDefault();
+                return false;
+
+            }
+        });
+    </script>
 
 <?php require_once('Common/footer.php') ?>
