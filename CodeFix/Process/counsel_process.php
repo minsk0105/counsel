@@ -1,5 +1,5 @@
 <?php
-    include('DB/db_connect.php');
+    include('../DB/db_connect.php');
 
     if (isset($_POST['non_members'])) {
 

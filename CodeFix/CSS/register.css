@@ -62,6 +62,11 @@ label {
     cursor: pointer;
 }
 
+/* 에러 메세지 */
+.error {
+    color: rgb(240, 0, 0);
+}
+
 @media screen and (max-width: 1150px) {
     #register {
         padding: 130px 20px;

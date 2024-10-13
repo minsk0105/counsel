@@ -36,7 +36,7 @@
                 <h2>5300-5300</h2>
             </div>
 
-            <form action="counsel_process.php" method="post" id="counsel_form">
+            <form action="Process/counsel_process.php" method="post" id="counsel_form">
 
                 <!-- 상담 신청 폼 -->
                 <div class="user_counsel">
