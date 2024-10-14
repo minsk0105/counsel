@@ -37,6 +37,7 @@
 
                 <!-- 로그인 입력 폼 -->
                 <form action="Process/login_process.php" method="post">
+
                     <div class="id-box">
                         <label>아이디</label>
                         <input type="text" name="id" id="id" placeholder="아이디를 입력해 주세요.">
@@ -48,6 +49,7 @@
                     </div>
 
                     <input type="submit" value="로그인" class="submit" name="login_submit">
+                    
                 </form>
 
                 <!-- 유저 정보 찾기 -->

@@ -25,6 +25,7 @@
     <div class="view_modal">
 
         <form action="" method="post">
+
             <div class="view_box">
                 <div class="close_view_box">
                     <svg id="remove_view" width="1em" height="1em" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -49,6 +50,7 @@
                     <button type="button" id="push_view">확인</button>
                 </div>
             </div>
+            
         </form>
 
     </div>

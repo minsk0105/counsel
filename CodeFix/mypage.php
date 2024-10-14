@@ -10,6 +10,7 @@
     <section id="mypage">
 
         <form action="Process/logout_process.php" method="post">
+
             <div class="page_contents">
 
                 <!-- 사용자 정보 및 로그아웃 버튼  -->
@@ -66,6 +67,7 @@
                 </div>
 
             </div>
+            
         </form>
 
     </section>
