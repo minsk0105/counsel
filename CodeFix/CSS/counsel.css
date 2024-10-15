@@ -25,7 +25,7 @@
     background-color: white;
     border-radius: 8px;
     overflow: hidden;
-    padding: 20px;
+    padding: 40px;
 }
 
 .close_view_box {
@@ -51,7 +51,7 @@
 
 .view_box label {
     display: block;
-    margin-top: 20px;
+    margin-top: 25px;
     font-size: 14px;
     font-weight: bold;
 }
