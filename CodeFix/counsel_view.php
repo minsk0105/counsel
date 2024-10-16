@@ -120,9 +120,9 @@
                         </dd>
                     </dl>
 
-                    <!-- 보상 판매 상품 -->
+                    <!-- 파일 첨부 -->
                     <dl>
-                        <dt><span>*</span> 보상 판매</dt>
+                        <dt><span>*</span> 파일 첨부</dt>
                         <dd style="display: flex;">
                             <input type="file" name="upFile" id="upFile" hidden>
                             <button type="button" class="checkFile">파일 업로드</button>
