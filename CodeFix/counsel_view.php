@@ -119,6 +119,16 @@
                             </p>
                         </dd>
                     </dl>
+
+                    <!-- 보상 판매 상품 -->
+                    <dl>
+                        <dt><span>*</span> 보상 판매</dt>
+                        <dd style="display: flex;">
+                            <input type="file" name="upFile" id="upFile" hidden>
+                            <button type="button" class="checkFile">파일 업로드</button>
+                            <span class="fileName">: 상담 신청 폼(body).png</span>
+                        </dd>
+                    </dl>
     
                     <!-- 개인정보처리방침 -->
                     <dl style="position: relative;">

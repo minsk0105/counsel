@@ -194,6 +194,24 @@ input[type="text"]::placeholder {
     color: rgb(196, 196, 196);
 }
 
+/* 파일 업로드 */
+.checkFile {
+    border: none;
+    background-color: #0072BB;
+    color: #eee;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.fileName {
+    height: 30.8px;
+    line-height: 30.8px;
+    margin-left: 10px;
+    font-size: 14px;
+}
+
 #request {
     min-width: 400px;
     width: 100%;
