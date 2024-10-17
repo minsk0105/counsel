@@ -567,6 +567,6 @@ footer {
 @media screen and (max-width: 1225px) {
     .bar_box {
         width: 100vw;
-        padding: 0 20px;
+        padding: 0 40px;
     }
 }

@@ -37,12 +37,23 @@
                 $_SESSION['mb_id'] = $row['mb_id'];
                 $_SESSION['mb_addr'] = $row['mb_addr'];
 
-            ?>
-                <script>
-                    alert("로그인되었습니다.");
-                    location.href = '../mypage.php';
-                </script>
-            <?php } else {
+                if (isset($_POST['save_counsel'])) {?>
+
+                    <script>
+                        alert("로그인되었습니다.");
+                        history.go(-2);
+                    </script>
+
+                <?php } else { ?>
+
+                    <script>
+                        alert("로그인되었습니다.");
+                        location.href = '../mypage.php';
+                    </script>
+
+                <?php }
+
+            } else {
 
                 echo "로그인 실패";
                 exit();

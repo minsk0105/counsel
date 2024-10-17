@@ -1,4 +1,4 @@
-<?php require_once('Common/header.php') ?>
+<?php require_once('Common/header.php'); ?>
 <head>
     <link rel="stylesheet" href="CSS/login.css">
 </head>
@@ -47,6 +47,10 @@
                         <label>비밀번호</label>
                         <input type="password" name="password" id="pass" placeholder="비밀번호를 입력해 주세요.">
                     </div>
+
+                    <?php if (isset($_GET['method'])) { ?>
+                        <input type="hidden" name="save_counsel" value="<?= $_GET['method'] ?>">
+                    <?php } ?>
 
                     <input type="submit" value="로그인" class="submit" name="login_submit">
                     
