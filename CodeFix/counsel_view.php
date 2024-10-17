@@ -70,7 +70,7 @@
                 <h2>5300-5300</h2>
             </div>
 
-            <form action="Process/counsel_process.php" method="post" id="counsel_form">
+            <form action="Process/counsel_process.php" method="post" id="counsel_form" enctype="multipart/form-data">
 
                 <!-- 상담 신청 폼 -->
                 <div class="user_counsel">
@@ -104,7 +104,7 @@
     
                     <!-- 예약일자 -->
                     <dl>
-                        <dt><span>*</span> 예약일자</dt>
+                        <dt><span>*</span> 예약 일자</dt>
                         <dd><input type="text" name="date" id="date" placeholder="2000-00-00"></dd>
                     </dl>
     
@@ -125,8 +125,8 @@
                         <dt><span>*</span> 파일 첨부</dt>
                         <dd style="display: flex;">
                             <input type="file" name="upFile" id="upFile" hidden>
-                            <button type="button" class="checkFile">파일 업로드</button>
-                            <span class="fileName">: 상담 신청 폼(body).png</span>
+                            <label for="upFile" name="upFile" class="checkFile">파일 업로드</label>
+                            <span class="file_name"></span>
                         </dd>
                     </dl>
     

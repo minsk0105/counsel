@@ -112,78 +112,78 @@ cancelBtn.forEach(function(btn) {
 
 
 // 상담 신청 입력란 입력 여부 확인
-const submitBtns = document.querySelectorAll('#counsel_form button[type="submit"]');
+// const submitBtns = document.querySelectorAll('#counsel_form button[type="submit"]');
 
-const inputName = document.getElementById('name');
-const inputPhone = document.getElementById('phone');
-const inputEmail = document.getElementById('email');
-const inputDate = document.getElementById('date');
-const inputText = document.getElementById('request');
+// const inputName = document.getElementById('name');
+// const inputPhone = document.getElementById('phone');
+// const inputEmail = document.getElementById('email');
+// const inputDate = document.getElementById('date');
+// const inputText = document.getElementById('request');
 
-submitBtns.forEach(function(submitBtn) {
-    submitBtn.addEventListener('click', function(event) {
-        if (inputName.value === "" || inputPhone.value === "" || inputEmail.value === "" || inputDate.value === "" || inputText.value === "") {
+// submitBtns.forEach(function(submitBtn) {
+//     submitBtn.addEventListener('click', function(event) {
+//         if (inputName.value === "" || inputPhone.value === "" || inputEmail.value === "" || inputDate.value === "" || inputText.value === "") {
             
-            if (inputName.value === "" && inputPhone.value !== "" && inputEmail.value !== "" && inputDate.value !== "" && inputText.value !== "") {
-                alert ("성명을 입력해 주세요.");
-                inputName.focus();
-            }
+//             if (inputName.value === "" && inputPhone.value !== "" && inputEmail.value !== "" && inputDate.value !== "" && inputText.value !== "") {
+//                 alert ("성명을 입력해 주세요.");
+//                 inputName.focus();
+//             }
 
-            else if (inputName.value !== "" && inputPhone.value === "" && inputEmail.value !== "" && inputDate.value !== "" && inputText.value !== "") {
-                alert ("전화번호를 입력해 주세요.");
-                inputPhone.focus();
-            }
+//             else if (inputName.value !== "" && inputPhone.value === "" && inputEmail.value !== "" && inputDate.value !== "" && inputText.value !== "") {
+//                 alert ("전화번호를 입력해 주세요.");
+//                 inputPhone.focus();
+//             }
 
-            else if (inputName.value !== "" && inputPhone.value !== "" && inputEmail.value === "" && inputDate.value !== "" && inputText.value !== "") {
-                alert ("이메일을 입력해 주세요.");
-                inputEmail.focus();
-            }
+//             else if (inputName.value !== "" && inputPhone.value !== "" && inputEmail.value === "" && inputDate.value !== "" && inputText.value !== "") {
+//                 alert ("이메일을 입력해 주세요.");
+//                 inputEmail.focus();
+//             }
 
-            else if (inputName.value !== "" && inputPhone.value !== "" && inputEmail.value !== "" && inputDate.value === "" && inputText.value !== "") {
-                alert ("예약일자를 입력해 주세요.");
-                inputDate.focus();
-            }
+//             else if (inputName.value !== "" && inputPhone.value !== "" && inputEmail.value !== "" && inputDate.value === "" && inputText.value !== "") {
+//                 alert ("예약 일자를 입력해 주세요.");
+//                 inputDate.focus();
+//             }
 
-            else if (inputName.value !== "" && inputPhone.value !== "" && inputEmail.value !== "" && inputDate.value !== "" && inputText.value === "") {
-                alert ("문의사항에 내용을 입력해 주세요.");
-                inputText.focus();
-            }
+//             else if (inputName.value !== "" && inputPhone.value !== "" && inputEmail.value !== "" && inputDate.value !== "" && inputText.value === "") {
+//                 alert ("문의사항에 내용을 입력해 주세요.");
+//                 inputText.focus();
+//             }
             
-            else {
-                alert("필수 정보를 입력해 주세요.");
-                location.href = "#consult";
-            }
+//             else {
+//                 alert("필수 정보를 입력해 주세요.");
+//                 location.href = "#consult";
+//             }
 
             
-            membersModal.classList.remove("show_modal");
-            nonMembersModal.classList.remove("show_modal");
-            event.preventDefault();
-            return false;
+//             membersModal.classList.remove("show_modal");
+//             nonMembersModal.classList.remove("show_modal");
+//             event.preventDefault();
+//             return false;
             
-        }
+//         }
 
-        checking(event);
-    });
-});
+//         checking(event);
+//     });
+// });
 
 //  개인정보처리방침 동의 여부 확인
-const agreeCheck = document.getElementById('agree');
-let checked;
+// const agreeCheck = document.getElementById('agree');
+// let checked;
 
-agreeCheck.addEventListener('change', function() {
-    checked = agreeCheck.checked;
-});
+// agreeCheck.addEventListener('change', function() {
+//     checked = agreeCheck.checked;
+// });
 
-function checking(check) {
-    if (!checked) {
-        alert("이용약관 동의란에 체크해 주세요.");
-        agreeCheck.focus();
-        membersModal.classList.remove("show_modal");
-        nonMembersModal.classList.remove("show_modal");
-        check.preventDefault();
-        return false;
-    }
-}
+// function checking(check) {
+//     if (!checked) {
+//         alert("이용약관 동의란에 체크해 주세요.");
+//         agreeCheck.focus();
+//         membersModal.classList.remove("show_modal");
+//         nonMembersModal.classList.remove("show_modal");
+//         check.preventDefault();
+//         return false;
+//     }
+// }
 
 /* 비회원 신청 조회 모달창 */
 const viewModal = document.querySelector('.view_modal');
@@ -201,4 +201,26 @@ removeView.addEventListener('click', function() {
 
 viewCancel.addEventListener('click', function() {
     viewModal.classList.remove("show_view");
+});
+
+// 파일 첨부
+const fileInput = document.getElementById('upFile');
+const fileName = document.querySelector('.file_name');
+let value;
+
+fileInput.addEventListener('change', function() {
+    value = this.value;
+    const split = value.split('\\');
+    const name = split[split.length - 1].split('.');
+    fileName.innerHTML = ": " + (name[0] + "." + name[1]);
+});
+
+const pushFile = document.querySelector('.checkFile');
+
+pushFile.addEventListener('click', function(event) {
+    if (value) {
+        alert("파일은 한 개만 업로드할 수 있습니다.")
+        event.preventDefault();
+        return false;
+    }
 });

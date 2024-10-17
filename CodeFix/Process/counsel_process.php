@@ -17,8 +17,14 @@
         $description = text_input($_POST['request']);
         $method = text_input($_POST['way']);
 
+        // 파일이 있는 경우
+        if (isset($_FILES['upFile']) && $_FILES['upFile']['tmp_name'] !== "") {
+            echo "okay";
+        }
+
     } else {
         echo "회원으로 신청";
+        exit();
     }
 ?>
 
