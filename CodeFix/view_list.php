@@ -21,6 +21,20 @@
     $list;
     while ($row = mysqli_fetch_array($query)) {
         if ($phone = $row['phone']) {
+            $list .= "
+                <div class=\"list_box\">
+                    <p class=\"reserv_date\">{$row['date']}</p>
+                    <p class=\"email\">{$row['email']}</p>
+                    <p class=\"desc\">
+                        {$row['description']}
+                    </p>
+                    <p class=\"counsel_way\">{$row['method']}</p>
+                    <div class=\"list_menu\">
+                        <button type=\"button\">자세히</button>
+                        <button type=\"button\">삭제</button>
+                    </div>
+                </div>
+            ";
         }
     }
 
@@ -42,7 +56,9 @@
             </div>
 
             <!-- 리스트 콘텐츠 -->
-            <div class="list_contents"></div>
+            <div class="list_contents">
+                <?=$list?>
+            </div>
 
         </div>
     </section>
