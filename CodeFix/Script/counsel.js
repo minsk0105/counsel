@@ -224,3 +224,29 @@ pushFile.addEventListener('click', function(event) {
         return false;
     }
 });
+
+// 비회원 신청 조회 입력란 입력 여부 확인
+const pushView = document.getElementById('push_view');
+const viewName = document.getElementById('viewName');
+const viewTel = document.getElementById('viewTel');
+
+pushView.addEventListener('click', function(event) {
+    const name = viewName.value;
+    const phone = viewTel.value;
+
+    if (name === "" || phone === "") {
+        if (name !== "" && phone === "") {
+            alert("전화번호를 입력해 주세요.");
+            viewTel.focus();
+        } else if (name === "" && phone !== "") {
+            alert("성명을 입력해 주세요.");
+            viewName.focus();
+        } else {
+            alert("성명 또는 전화번호를 입력하지 않았습니다.");
+        }
+
+        event.preventDefault();
+        return false;
+    }
+
+});

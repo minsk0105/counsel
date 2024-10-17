@@ -27,7 +27,7 @@
     <!-- 비회원 신청 조회 모달창 -->
     <div class="view_modal">
 
-        <form action="" method="post">
+        <form action="Process/list_process.php" method="post">
 
             <div class="view_box">
                 <div class="close_view_box">
@@ -38,10 +38,10 @@
                 <h2>비회원 신청 조회</h2>
 
                 <label><span style="color: #0072BB;">*</span> 성명</label>
-                <input type="text" name="name" placeholder="성명">
+                <input type="text" name="name" id="viewName" placeholder="성명">
 
                 <label><span style="color: #0072BB;">*</span> 전화번호</label>
-                <input type="text" name="phone" placeholder="01012345678">
+                <input type="text" name="phone" id="viewTel" placeholder="01012345678">
 
                 <ul>
                     <li><p>- 구매 상담 신청 시 인증 받은 성명과 휴대폰 번호를 입력하시면 구매 상담 신청 내역을 확인하실 수 있습니다.</p></li>
