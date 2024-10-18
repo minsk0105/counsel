@@ -20,6 +20,7 @@
 
     $list;
     while ($row = mysqli_fetch_array($query)) {
+
         if ($phone = $row['phone']) {
             $list .= "
                 <div class=\"list_box\">
@@ -36,6 +37,7 @@
                 </div>
             ";
         }
+        
     }
 
 ?>
