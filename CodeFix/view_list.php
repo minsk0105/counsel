@@ -59,7 +59,7 @@
 
             <!-- 리스트 콘텐츠 -->
             <div class="list_contents">
-                <?=$list?>
+                <?= $list ?>
             </div>
 
         </div>
