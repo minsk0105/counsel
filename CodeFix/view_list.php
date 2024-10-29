@@ -14,8 +14,6 @@
 
         $name = $_GET['name'];
         $phone = $_GET['phone'];
-        // echo $name."<br>";
-        // echo $phone."<br>";
     
         $sql = "SELECT * FROM nons_counsel
             WHERE name = '$name'
