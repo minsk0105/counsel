@@ -50,7 +50,7 @@
 
                 <div class="view_submit">
                     <button type="button" id="view_cancel">취소</button>
-                    <button type="submit" id="push_view">확인</button>
+                    <button type="submit" id="push_view" name="nons">확인</button>
                 </div>
             </div>
             

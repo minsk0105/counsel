@@ -63,7 +63,7 @@
                 <!-- 사용자 상담 신청 내역 -->
                 <div class="counsel_history">
                     <h1>나의 상담 신청 내역</h1>
-                    <a href="#"><i class="fa-solid fa-arrow-right-long"></i>나의 신청 내역 보러가기</a>
+                    <a href="Process/list_process.php"><i class="fa-solid fa-arrow-right-long"></i>나의 신청 내역 보러가기</a>
                 </div>
 
             </div>
