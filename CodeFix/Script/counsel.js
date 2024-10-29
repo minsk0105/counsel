@@ -219,7 +219,7 @@ const pushFile = document.querySelector('.checkFile');
 
 pushFile.addEventListener('click', function(event) {
     if (value) {
-        alert("파일은 한 개만 업로드할 수 있습니다.")
+        alert("파일은 한 개만 업로드할 수 있습니다.");
         event.preventDefault();
         return false;
     }

@@ -17,11 +17,9 @@
     $method = text_input($_POST['way']);
 
     if (isset($_POST['non_members'])) {
-        echo "비회원 버튼";
-        die();
 
-        $sql = "INSERT INTO nons_counsel (name, phone, email, date, description, method)
-            VALUES (?,?,?,?,?,?)
+        $sql = "INSERT INTO nons_counsel (name, phone, email, date, description, method, register_time)
+            VALUES (?,?,?,?,?,?, NOW())
         ";
 
         $push_stmt = mysqli_prepare($conn, $sql); // 쿼리 준비
@@ -66,6 +64,11 @@
                     history.back();
                 </script>
             <?php } else {
+
+                if (isset($_FILES['upFile']) && $_FILES['upFile']['tmp_name'] !== "") {
+                    echo "success";
+                }
+                die();
 
                 $sql = "INSERT INTO members_counsel (user_id, user_phone, user_email, user_date, description, method, register_time)
                 VALUES (?,?,?,?,?,?, now())
