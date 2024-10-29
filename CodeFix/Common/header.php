@@ -58,10 +58,12 @@
                     </ul>
                 </li>
             </ul>
+
         </div>
 
         <!-- 헤더 아이콘 -->
         <div class="header-right">
+
             <svg width="1em" height="1em" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M16.2803 15.5035L22.0001 21.2234L21.2234 22.0001L15.5035 16.2803L16.2803 15.5035Z" fill="currentColor"></path>
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M10.3759 3.09847C6.35667 3.09847 3.09847 6.35667 3.09847 10.3759C3.09847 14.395 6.35667 17.6532 10.3759 17.6532C14.395 17.6532 17.6532 14.395 17.6532 10.3759C17.6532 6.35667 14.395 3.09847 10.3759 3.09847ZM2 10.3759C2 5.75 5.75 2 10.3759 2C15.0017 2 18.7517 5.75 18.7517 10.3759C18.7517 15.0017 15.0017 18.7517 10.3759 18.7517C5.75 18.7517 2 15.0017 2 10.3759Z" fill="currentColor"></path>
@@ -82,6 +84,7 @@
             <svg id="show_bar" width="1em" height="1em" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M21 6.5H3V5.5H21V6.5ZM21 12.5H3V11.5H21V12.5ZM21 18.5H3V17.5H21V18.5Z" fill="currentColor"></path>
             </svg>
+            
         </div>
 
     </header>
