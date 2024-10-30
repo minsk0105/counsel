@@ -38,7 +38,8 @@
         
             if ($hash === $hashed) {
                 
-                header("Location: ../view_list.php?name=$name&phone=$hashed");
+                // header("Location: ../view_list.php?name=$name&phone=$hashed");
+                header("Location: ../test.php?name=$name&phone=$hashed");
                 exit();
             
             } else {
@@ -48,7 +49,8 @@
         
         }
     } else {
-        header("Location: ../view_list.php");
+        // header("Location: ../view_list.php");
+        header("Location: ../test.php");
         exit();
     }
 

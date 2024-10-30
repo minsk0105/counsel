@@ -1,6 +1,6 @@
 <?php
     session_start();
-    // require_once("Common/header.php");
+    require_once("Common/header.php");
 ?>
 <head>
     <link rel="stylesheet" href="CSS/nons_list.css">
@@ -22,46 +22,35 @@
         $find_sql = "SELECT * FROM nons_counsel INNER JOIN file
             ON nons_counsel.register_time = file.upload_time
         ";
+
+        $name_sql ="SELECT name_origin, upload_time FROM file";
     
         $query = mysqli_query($conn, $sql);
         $push_find = mysqli_query($conn, $find_sql);
+        $name_query = mysqli_query($conn, $name_sql);
 
-        $file_isset = '';
-        $file_name = '';
-        while ($file_row = mysqli_fetch_array($push_find)) {
-            $file_isset .= "," . $file_row['upload_time'];
-            $file_name .= "," . $file_row['name_origin'];
+        $file_isset = array();
+        $file_name = array();
+
+        while ($file_row = mysqli_fetch_assoc($push_find)) {
+            $file_isset[] = $file_row['upload_time'];
+            
+            while ($name_row = mysqli_fetch_array($name_query)) {
+                if ($file_row['upload_time'] = $name_row['upload_time']) {
+                    $file_name[] = $name_row['name_origin'];
+                }
+            }
         }
-        
+
         $list = '';
-        $trav_str = explode(',', $file_isset);
-        $trav_name = explode(',', $file_name);
-        $sum = 1;
-        $img_src = '';
+        $sum = count($file_name) - 1;
     
         while ($row = mysqli_fetch_array($query)) {
-
-            $count = $sum++;
-            $allowed_fileName = substr($trav_name[$count], strrpos($trav_name[$count], '.') + 1);
-            if ($allowed_fileName === "txt") {
-                $img_src = "Image/free-icon-txt-file-11471393.png";
-            } else if ($allowed_fileName === "png") {
-                $img_src = "Image/free-icon-png-file-10260781.png";
-            } else if ($allowed_fileName === "jpg") {
-                $img_src = "CodeFix/Image/free-icon-jpg-file-8263083.png";
-            } else if ($allowed_fileName === "pdf") {
-                $img_src = "Image/free-icon-pdf-9496432.png";
-            } else if ($allowed_fileName === "xls") {
-                $img_src = "Image/free-icon-xls-8243067.png";
-            } else if ($allowed_fileName === "hwp") {
-                $img_src = "Image/free-icon-file-14422348.png";
-            } else {
-                $img_src = "Image/free-icon-doc-file-10260338.png";
-            }
     
             if ($phone = $row['phone']) {
 
-                if (in_array($row['register_time'], $trav_str)) {
+                if (in_array($row['register_time'], $file_isset)) {
+                    $count = $sum--;
 
                     $list .= "
                         <div class=\"list_box\">
@@ -72,8 +61,8 @@
                             </p>
                             <p class=\"counsel_way\">{$row['method']}</p>
                             <div class=\"view_file\">
-                                <img src='$img_src' alt=\"icon\" class=\"file_icon\">
-                                $trav_name[$count]
+                                <img src='' alt=\"icon\" class=\"file_icon\">
+                                $file_name[$count]
                             </div>
                             <div class=\"list_menu\">
                                 <button type=\"button\">자세히</button>
@@ -81,12 +70,13 @@
                             </div>
                         </div>
                     ";
+
                 } else {
-                    
+
                     $list .= "
                         <div class=\"list_box\">
-                            <p class=\"reserv_date\">{$row['user_date']}</p>
-                            <p class=\"email\">{$row['user_email']}</p>
+                            <p class=\"reserv_date\">{$row['date']}</p>
+                            <p class=\"email\">{$row['email']}</p>
                             <p class=\"desc\">
                                 {$row['description']}
                             </p>
@@ -97,6 +87,7 @@
                             </div>
                         </div>
                     ";
+
                 }
             }
             
@@ -112,44 +103,34 @@
             ON members_counsel.register_time = file.upload_time
         ";
 
+        $name_sql ="SELECT name_origin, upload_time FROM file";
+
         $query = mysqli_query($conn, $sql);
         $push_find = mysqli_query($conn, $find_sql);
+        $name_query = mysqli_query($conn, $name_sql);
 
-        $file_isset = '';
-        $file_name = '';
-        while ($file_row = mysqli_fetch_array($push_find)) {
-            $file_isset .= "," . $file_row['upload_time'];
-            $file_name .= "," . $file_row['name_origin'];
-        }
-        
-        $list = '';
-        $trav_str = explode(',', $file_isset);
-        $trav_name = explode(',', $file_name);
-        $sum = 1;
-        $img_src = '';
-        
-        while ($row = mysqli_fetch_array($query)) {
-            $count = $sum++;
-            $allowed_fileName = substr($trav_name[$count], strrpos($trav_name[$count], '.') + 1);
+        $file_isset = array();
+        $file_name = array();
 
-            if ($allowed_fileName === "txt") {
-                $img_src = "Image/free-icon-txt-file-11471393.png";
-            } else if ($allowed_fileName === "png") {
-                $img_src = "Image/free-icon-png-file-10260781.png";
-            } else if ($allowed_fileName === "jpg") {
-                $img_src = "CodeFix/Image/free-icon-jpg-file-8263083.png";
-            } else if ($allowed_fileName === "pdf") {
-                $img_src = "Image/free-icon-pdf-9496432.png";
-            } else if ($allowed_fileName === "xls") {
-                $img_src = "Image/free-icon-xls-8243067.png";
-            } else if ($allowed_fileName === "hwp") {
-                $img_src = "Image/free-icon-file-14422348.png";
-            } else {
-                $img_src = "Image/free-icon-doc-file-10260338.png";
+        while ($file_row = mysqli_fetch_assoc($push_find)) {
+            $file_isset[] = $file_row['upload_time'];
+            
+            while ($name_row = mysqli_fetch_array($name_query)) {
+                if ($file_row['upload_time'] = $name_row['upload_time']) {
+                    $file_name[] = $name_row['name_origin'];
+                }
             }
+        }
+
+        $list = '';
+        // $sum = count($file_name) - 1;
+        $sum = 0;
+        while ($row = mysqli_fetch_array($query)) {
             
             if ($phone = $row['user_phone']) {
-                if (in_array($row['register_time'], $trav_str)) {
+
+                if (in_array($row['register_time'], $file_isset)) {
+                    $count = $sum++;
 
                     $list .= "
                         <div class=\"list_box\">
@@ -160,8 +141,8 @@
                             </p>
                             <p class=\"counsel_way\">{$row['method']}</p>"."
                             <div class=\"view_file\">
-                                <img src='$img_src' alt=\"icon\" class=\"file_icon\">
-                                $trav_name[$count]
+                                <img src='' alt=\"icon\" class=\"file_icon\">
+                                $file_name[$count]
                             </div>
                             <div class=\"list_menu\">
                                 <button type=\"button\">자세히</button>
