@@ -66,9 +66,43 @@
             <?php } else {
 
                 if (isset($_FILES['upFile']) && $_FILES['upFile']['tmp_name'] !== "") {
-                    echo "success";
+
+                    $file = $_FILES['upFile'];
+                    $ext_str = "hwp,xls,doc,xlsx,docx,pdf,jpg,gif,png,txt,ppt,pptx";
+                    $allowed_str = explode(',', $ext_str);
+                    $max_fileSize = 5242880; // 5MB
+                    $ext = strtolower(substr($file['name'], strrpos($file['name'], '.') + 1));
+
+                    if (!in_array($ext, $allowed_str)) { ?>
+                        <script>
+                            alert("업로드할 수 없는 확장자입니다.");
+                            history.back();
+                        </script>
+                    <?php }
+
+                    if ($file['size'] >= $max_fileSize) { ?>
+                        <script>
+                            alert("적정 용량을 초과하였습니다.");
+                            history.back();
+                        </script>
+                    <?php }
+
+                    $file_path = md5(microtime()) . '.' . $ext; // 파일 이름 생성
+
+                    $query = "INSERT INTO file (file_id, name_origin, name_save, upload_time)
+                        VALUES (?,?,?,NOW())
+                    ";
+
+                    $file_id = md5(uniqid(rand()));
+                    $file_name = $file['name'];
+                    $name_save = $file_path;
+
+                    $upload_stmt = mysqli_prepare($conn, $query);
+                    $upload_bind = mysqli_stmt_bind_param($upload_stmt, 'sss', $file_id, $file_name, $name_save);
+                    $file_exc = mysqli_stmt_execute($upload_stmt);
+                    mysqli_stmt_close($upload_stmt);
+
                 }
-                die();
 
                 $sql = "INSERT INTO members_counsel (user_id, user_phone, user_email, user_date, description, method, register_time)
                 VALUES (?,?,?,?,?,?, now())

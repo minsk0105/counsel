@@ -99,6 +99,22 @@ header .header-right path {
     color: gray;
 }
 
+.view_file {
+    display: flex;
+    align-items: center;
+    border-top: 1px solid rgb(196, 196, 196);
+    font-size: 14px;
+    padding: 10px;
+    margin-top: 5px;
+}
+
+.file_icon {
+    display: flex;
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
 .list_menu {
     margin-top: 15px;
     width: 100%;
