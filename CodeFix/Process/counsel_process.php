@@ -42,7 +42,7 @@
 
             $file_path = md5(microtime()) . '.' . $ext; // 파일 이름 생성
 
-            $query = "INSERT INTO file (file_id, name_origin, name_save, upload_time)
+            $query = "INSERT INTO nons_file (file_id, name_origin, name_save, upload_time)
                 VALUES (?,?,?,NOW())
             ";
 
